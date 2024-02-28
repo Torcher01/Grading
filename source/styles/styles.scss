@@ -3,6 +3,12 @@
 @import "./global/global.scss";
 @import "./global/fonts.scss";
 @import "./global/container.scss";
+@import "./global/button.scss";
+@import "./global/section-header.scss";
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/slide-description.scss";
+@import "./blocks/features.scss";
+@import "./blocks/catalog.scss";

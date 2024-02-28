@@ -1,0 +1,52 @@
+
+
+.slide-description__header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin: 0 4px 10px 0;
+}
+
+.slide-description__description {
+  width: 280px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  margin: 0 0 20px 19px;
+}
+
+.slide-description__flex-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.slide-description__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-left: 46px;
+  margin-right: 21px;
+
+  &:before {
+    content: "295₽";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: line-through;
+    color: #7859CF;
+    margin-right: 5px;
+  }
+}
+
+.slide-description__order-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px;
+  padding: 9px 20px 7px;
+  color: #FFFFFF;
+}

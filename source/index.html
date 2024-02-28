@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__flex-wrapper">
-          <img class="header__logo" src="images/logo.svg" alt="Логотип" width="32px" height="36px">
-          <img class="header__login-button" src="images/icons/login.svg" alt="Вход в личный кабинет" width="16px" height="16px">
-          <img class="header__cart-button" src="images/icons/cart.svg" alt="Корзина" width="16px" height="16px">
-          <img class="header__burger-menu-open" src="images/icons/burger-menu.svg" alt="Развернуть меню" width="16px" height="12px"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__flex-wrapper">
+      <img class="header__logo" src="images/logo.svg" width="32" height="36" alt="Логотип">
+      <img class="header__login-button" src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
+      <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
+      <img class="header__burger-menu-open" src="images/icons/burger-menu.svg" width="16" height="12"
+           alt="Развернуть меню">
+    </div>
+  </div>
+</header>
+<main class="main">
+  <section class="slider">
+    <div class="container">
+      <picture>
+        <source type="image/webp"
+                srcset="images/mobile/flat_white_slider_mobile_img@1x.webp 1x,
+                        images/mobile/flat_white_slider_mobile_img@2x.webp 2x">
+        <img class="slider__flat-white-img" src="images/mobile/flat_white_slider_mobile_img@1x.png" width="280"
+             height="280"
+             alt="Слайд №1: флэт-уайт без кофеина" srcset="images/mobile/flat_white_slider_mobile_img@2x.png 2x">
+      </picture>
+      <div class="slider__slide-description slide-description">
+        <p class="section-header">Новинка!</p>
+        <h2 class="slide-description__header">Декаф Флэт Уайт</h2>
+        <p class="slide-description__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
+          молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+        <div class="slide-description__flex-wrapper">
+          <span class="slide-description__price">225₽</span>
+          <button class="button slide-description__order-button">Заказать</button>
+        </div>
       </div>
-    </header>
-  <main class="main">
-    <section class="slider">
-      <div class="container slider__background-wrapper">
+    </div>
+  </section>
+  <section class="features">
+    <div class="container">
+      <div class="features__flex-wrapper">
+        <p class="section-header section-header--features">Преимущества</p>
+        <h2 class="features__header">Главные причины выбрать Drink2Go</h2>
 
+        <img class="features__icon" src="images/feature_speed.svg" width="50" height="56"
+             alt="Иконка, изображающая секундомер">
+        <h3 class="features__feature-header features__feature-header--speed">Скорость</h3>
+        <p class="features__feature-description">Готовый напиток всегда под рукой — просто открой банку</p>
+
+        <img class="features__icon" src="images/feature_convenience.svg" width="52" height="56"
+             alt="Иконка, изображающая карман">
+        <h3 class="features__feature-header features__feature-header--convenience">Удобство</h3>
+        <p class="features__feature-description">Легко помещается и в карман,<br>
+          и в маленькую сумочку</p>
+
+        <img class="features__icon" src="images/feature_courage.svg" width="42" height="56"
+             alt="Иконка, изображающая молнию">
+        <h3 class="features__feature-header features__feature-header--courage">Бодрость</h3>
+        <p class="features__feature-description">Сбалансированная доза кофеина<br> даст мощный заряд энергии</p>
+
+        <img class="features__icon" src="images/feature_eco.svg" width="46" height="56"
+             alt="Иконка, изображающая лист дерева">
+        <h3 class="features__feature-header features__feature-header--eco">Экологичность</h3>
+        <p class="features__feature-description">Вся упаковка сделана<br> из перерабатываемых материалов</p>
       </div>
-    </section>
-  </main>
-  </body>
+    </div>
+  </section>
+  <section class="catalog">
+    <div class="container">
+      <p class="section-header">Каталог</p>
+      <h2 class="catalog__header">Каталог кофейных напитков</h2>
+      <form>
+
+      </form>
+    </div>
+  </section>
+</main>
+</body>
 </html>
