@@ -1,5 +1,18 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header__flex-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.header__logo {
+  margin-left: 20px;
+  margin-right: 110px;
+}
+
+.header__login-button {
+  margin-right: 44px;
+}
+
+.header__cart-button {
+  margin-right: 44px;
 }
