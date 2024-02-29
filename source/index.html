@@ -73,10 +73,48 @@
   </section>
   <section class="catalog">
     <div class="container">
-      <p class="section-header">Каталог</p>
+      <p class="section-header section-header--catalog">Каталог</p>
       <h2 class="catalog__header">Каталог кофейных напитков</h2>
-      <form>
-
+      <form class="catalog__form form">
+        <fieldset class="form__fieldset price-sorting">
+          <p class="form__label">Цена</p>
+          <div class="price-sorting__range">
+            <div class="price-sorting__slider"></div>
+            <div class="price-sorting__interval"></div>
+            <div class="price-sorting__interval-blocked"></div>
+            <div class="price-sorting__slider price-sorting__slider--max"></div>
+          </div>
+          <div class="price-sorting__value">
+            <input class="price-sorting__input price-sorting__input--left" value="0">
+            <div class="price-sorting__separator"></div>
+            <input class="price-sorting__input" value="900"></div>
+        </fieldset>
+        <fieldset class="form__fieldset milk-presence">
+          <p class="form__label">Наличие молока</p>
+          <div class="milk-presence__flex-wrapper">
+            <label class="milk-presence__label">
+              <input class="milk-presence__radio" type="radio" name="milk-presence" value="not-important" checked>
+              Неважно
+              <span class="milk-presence__radio-styled"></span>
+            </label>
+            <label class="milk-presence__label">
+              <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-animal-milk">
+              Только животное
+              <span class="milk-presence__radio-styled"></span>
+            </label>
+            <label class="milk-presence__label">
+              <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-plant-milk">
+              Только растительное
+              <span class="milk-presence__radio-styled"></span>
+            </label>
+            <label class="milk-presence__label milk-presence__disabled">
+              <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
+                     value="without-milk" disabled>
+              Без молока
+              <span class="milk-presence__radio-styled milk-presence__disabled"></span>
+            </label>
+          </div>
+        </fieldset>
       </form>
     </div>
   </section>
