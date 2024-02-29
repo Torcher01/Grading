@@ -24,11 +24,11 @@
     <div class="container">
       <picture>
         <source type="image/webp"
-                srcset="images/mobile/flat_white_slider_mobile_img@1x.webp 1x,
-                        images/mobile/flat_white_slider_mobile_img@2x.webp 2x">
-        <img class="slider__flat-white-img" src="images/mobile/flat_white_slider_mobile_img@1x.png" width="280"
+                srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
+                 images/mobile/slider/flat_white_slider_mobile_img@2x.webp2x.webp 2x">
+        <img class="slider__flat-white-img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280"
              height="280"
-             alt="Слайд №1: флэт-уайт без кофеина" srcset="images/mobile/flat_white_slider_mobile_img@2x.png 2x">
+             alt="Слайд №1: флэт-уайт без кофеина" srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
       </picture>
       <div class="slider__slide-description slide-description">
         <p class="section-header">Новинка!</p>
@@ -75,7 +75,7 @@
     <div class="container">
       <p class="section-header section-header--catalog">Каталог</p>
       <h2 class="catalog__header">Каталог кофейных напитков</h2>
-      <form class="catalog__form form">
+      <form class="catalog__sorting-form form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset price-sorting">
           <p class="form__label">Цена</p>
           <div class="price-sorting__range">
@@ -85,9 +85,10 @@
             <div class="price-sorting__slider price-sorting__slider--max"></div>
           </div>
           <div class="price-sorting__value">
-            <input class="price-sorting__input price-sorting__input--left" value="0">
+            <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price" name="min-price"
+                   value="0">
             <div class="price-sorting__separator"></div>
-            <input class="price-sorting__input" value="900"></div>
+            <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
         </fieldset>
         <fieldset class="form__fieldset milk-presence">
           <p class="form__label">Наличие молока</p>
@@ -115,7 +116,169 @@
             </label>
           </div>
         </fieldset>
+        <fieldset class="form__fieldset country-of-origin">
+          <p class="form__label">Страна произрастания</p>
+          <div class="country-of-origin__flex-wrapper">
+            <label class="country-of-origin__label">
+              <input class="country-of-origin__switcher" type="checkbox" id="brazil" name="brazil" checked>
+              <span class="country-of-origin__styled-switcher"></span>
+              <span class="country-of-origin__country-name">Бразилия</span>
+            </label>
+            <label class="country-of-origin__label">
+              <input class="country-of-origin__switcher" type="checkbox" id="ethiopia" name="ethiopia">
+              <span class="country-of-origin__styled-switcher"></span>
+              <span class="country-of-origin__country-name">Эфиопия</span>
+            </label>
+            <label class="country-of-origin__label">
+              <input class="country-of-origin__switcher" type="checkbox" id="colombia" name="colombia">
+              <span class="country-of-origin__styled-switcher"></span>
+              <span class="country-of-origin__country-name">Колумбия</span>
+            </label>
+            <label class="country-of-origin__label">
+              <input class="country-of-origin__switcher" type="checkbox" id="costa-rica" name="costa-rica">
+              <span class="country-of-origin__styled-switcher"></span>
+              <span class="country-of-origin__country-name">Коста-Рика</span>
+            </label>
+            <label class="country-of-origin__label">
+              <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled>
+              <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
+              <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
+            </label>
+          </div>
+        </fieldset>
+        <button class="button form__submit-button" type="submit">Применить</button>
+        <input class="button form__clear-button" type="reset" value="Сбросить">
       </form>
+      <div class="catalog__sorting">
+        <p class="catalog__sorting-label">Сортировка:</p>
+        <select class="catalog__sorting-group">
+          <option>по умолчанию</option>
+          <option>дороже</option>
+          <option>дешевле</option>
+        </select>
+      </div>
+      <div class="catalog__products products">
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/white_can_mobile@1x.webp 1x,
+                        images/mobile/catalog/white_can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/white_can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, белая банка" srcset="images/mobile/catalog/white_can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/purple_can_mobile@1x.webp 1x,
+                        images/mobile/catalog/purple_can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/purple_can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, фиолетовая банка" srcset="images/mobile/catalog/purple_can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/black_can_mobile@1x.webp 1x,
+                 images/mobile/catalog/black_can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/black_can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, чёрная банка" srcset="images/mobile/catalog/black_can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/pink__can_mobile@1x.webp 1x,
+                 images/mobile/catalog/pink__can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/pink__can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, розовая банка" srcset="images/mobile/catalog/pink__can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/brown_can_mobile@1x.webp 1x,
+                 images/mobile/catalog/brown_can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/brown_can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, коричневая банка" srcset="images/mobile/catalog/brown_can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+        <div class="products__product-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="images/mobile/catalog/beige_can_mobile@1x.webp 1x,
+                 images/mobile/catalog/beige_can_mobile@2x.webp 2x">
+            <img class="products__card-image" src="images/mobile/catalog/beige_can_mobile@1x.png" width="130"
+                 height="188"
+                 alt="Фотография товара, бежевая банка" srcset="images/mobile/catalog/beige_can_mobile@2x.png 2x">
+          </picture>
+          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+            с натуральным фермерским<br> молоком</p>
+          <div class="products__card-buy-block">
+            <span class="products__card-price">225₽</span>
+            <button class="button products__card-buy-button" type="button">
+              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
