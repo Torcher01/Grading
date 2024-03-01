@@ -25,7 +25,7 @@
       <picture>
         <source type="image/webp"
                 srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
-                 images/mobile/slider/flat_white_slider_mobile_img@2x.webp2x.webp 2x">
+                 images/mobile/slider/flat_white_slider_mobile_img@2x.webp 2x">
         <img class="slider__flat-white-img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280"
              height="280"
              alt="Слайд №1: флэт-уайт без кофеина" srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
@@ -279,8 +279,90 @@
           </div>
         </div>
       </div>
+      <div class="catalog__pagination">
+        <button class="catalog__pagination-button catalog__pagination-back" type="button">
+          <img src="images/pagination-back.svg" width="20" height="10" alt="Стрелка влево">
+        </button>
+        <a class="catalog__pagination-number" href="#">
+          1
+        </a>
+        <a class="catalog__pagination-number catalog__pagination-number--active" href="#">
+          2
+        </a>
+        <a class="catalog__pagination-number" href="#">
+          3
+        </a>
+        <button class="catalog__pagination-button catalog__pagination-forward" type="button">
+          <img src="images/pagination_forward.svg" width="20" height="10" alt="Стрелка вправо">
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <div class="container">
+      <picture>
+        <source type="image/webp"
+                srcset="images/mobile/map_mobile@1x.webp 1x,
+                 images/mobile/map_mobile@2x.webp 2x">
+        <img class="map__img" src="images/mobile/map_mobile@1x.png" width="320px" height="420"
+             alt="Карта с расположением магазина" srcset="images/mobile/map_mobile@2x.png 2x">
+      </picture>
     </div>
   </section>
 </main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__logo-social">
+      <a class="footer__logo" href="#">
+        <img src="images/footer_logo.svg" width="82" height="36" alt="Логотип">
+      </a>
+      <div class="footer__social">
+        <a class="footer__social-link" href="#">
+          <img src="images/VK_logo.svg" width="20" height="20" alt="ВКонтакте">
+        </a>
+        <a class="footer__social-link" href="#">
+          <img src="images/pinterest_logo.svg" width="20" height="20" alt="Pinterest">
+        </a>
+        <a class="footer__social-link" href="#">
+          <img src="images/OK_logo.svg" width="20" height="20" alt="Одноклассники">
+        </a>
+      </div>
+    </div>
+    <div class="footer__section">
+      <h3 class="footer__block-header">
+        Интернет-магазин
+      </h3>
+      <a class="footer__link" href="#">Каталог</a>
+      <a class="footer__link" href="#">Доставка</a>
+      <a class="footer__link" href="#">Способы оплаты</a>
+      <a class="footer__link" href="#">О нас</a>
+    </div>
+    <div class="footer__section">
+      <h3 class="footer__block-header">
+        Медиа
+      </h3>
+      <a class="footer__link" href="#">Блог</a>
+      <a class="footer__link" href="#">Информация для СМИ</a>
+      <a class="footer__link" href="#">Правовая информация</a>
+    </div>
+    <div class="footer__section footer__contacts">
+      <h3 class="footer__block-header footer__contacts-header">
+        Контакты
+      </h3>
+      <div class="footer__section-flex-wrapper">
+        <img src="images/navigation_icon.svg" width="13" height="16" alt="">
+        <p class="footer__contacts-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+      </div>
+      <div class="footer__section-flex-wrapper">
+        <img src="images/phone_icon.svg" width="13" height="16" alt="">
+        <p class="footer__contacts-text">+7 (999) 999-99-99</p>
+      </div>
+    </div>
+    <a class="footer__developer-data" href="https://htmlacademy.ru/intensive/adaptive">
+      Разработано в HTML Academy
+      <img src="images/HTML_Academy_developer_logo.svg" width="12" height="16" alt="Логотип HTML Academy">
+    </a>
+  </div>
+</footer>
 </body>
 </html>

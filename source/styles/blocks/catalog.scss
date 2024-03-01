@@ -1,5 +1,4 @@
 .catalog {
-  margin-bottom: 50px;
   background-color: #F8F8F8;
 }
 
@@ -17,7 +16,7 @@
 .catalog__sorting {
   position: relative;
   display: flex;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 
 .catalog__sorting-label {
@@ -48,4 +47,38 @@
   &:active {
     background-image: url("../../images/sort-arrow-up.svg");
   }
+}
+
+.catalog__products {
+  margin-bottom: 21px;
+}
+
+.catalog__pagination {
+  margin-left: 20px;
+  padding-bottom: 45px;
+}
+
+.catalog__pagination-button {
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  padding: 13px 10px 11px;
+}
+
+.catalog__pagination-number {
+  color: #7859CF;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 13px 10px 17px;
+  margin-right: 18px;
+}
+
+.catalog__pagination-number--active {
+  cursor: default;
+  background-color: transparent;
+  color: #333333;
+}
+
+.catalog__pagination-back {
+  margin-right: 16px;
 }
