@@ -50,7 +50,7 @@
 }
 
 .catalog__products {
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .catalog__pagination {
@@ -62,7 +62,28 @@
   background-color: #FFFFFF;
   border: none;
   cursor: pointer;
-  padding: 13px 10px 11px;
+  padding: 12px 17px 11px;
+  border-radius: 4px;
+
+  & svg {
+    fill: #7859CF;
+  }
+
+  &:hover, &:focus {
+    background-color: #9070EC;
+  }
+
+  &:hover svg, &:focus svg, &:active svg, &:disabled svg {
+    fill: #FFFFFF;
+  }
+
+  &:active {
+    background-color: #593CAC;
+  }
+
+  &:disabled {
+    background-color: #E2E2E2;
+  }
 }
 
 .catalog__pagination-number {
@@ -71,12 +92,32 @@
   text-decoration: none;
   padding: 10px 13px 10px 17px;
   margin-right: 18px;
+  border-radius: 4px;
+
+  &:hover:not(.catalog__pagination-number--active), &:focus:not(.catalog__pagination-number--active), &:active:not(.catalog__pagination-number--active), &:disabled:not(.catalog__pagination-number--active) {
+    color: #FFFFFF;
+  }
+
+  &:hover:not(.catalog__pagination-number--active), &:focus:not(.catalog__pagination-number--active) {
+    background-color: #9070EC;
+  }
+
+  &:active:not(.catalog__pagination-number--active) {
+    background-color: #593CAC;
+  }
+
+  &:disabled {
+    background-color: #E2E2E2;
+  }
 }
 
 .catalog__pagination-number--active {
   cursor: default;
   background-color: transparent;
   color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .catalog__pagination-back {

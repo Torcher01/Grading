@@ -2,19 +2,33 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #F0EBFF;
-  padding-bottom: 17px;
+  padding-bottom: 15px;
 }
 
 .footer__logo {
   margin-left: 20px;
-  margin-right: 48px;
+  margin-right: 38px;
 }
 
 .footer__social-link {
   text-decoration: none;
 
   &:not(:last-child) {
-    margin-right: 36px;
+    margin-right: 15px;
+  }
+
+  & svg {
+    fill: #BDBDBD;
+    padding: 10px;
+  }
+
+  & svg:hover, & svg:focus {
+    fill: #7859CF;
+    background-color: #F0EBFF;
+  }
+
+  & svg:active {
+    background-color: rgba(120, 89, 207, 0.25);
   }
 }
 
@@ -40,9 +54,9 @@
 
 .footer__section {
   border-bottom: 1px solid #F0EBFF;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   margin-left: 20px;
-  margin-top: 21px;
+  margin-top: 20px;
 }
 
 .footer__link {
@@ -59,7 +73,8 @@
 
 .footer__contacts {
   padding-bottom: 20px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .footer__contacts-header {
@@ -84,7 +99,24 @@
   margin-left: 57px;
   letter-spacing: 0.03px;
 
-  & img {
+  & svg {
+    fill: #BDBDBD;
     margin-left: 4px;
+  }
+
+  &:hover svg, &:focus svg {
+    fill: #7859CF;
+  }
+
+  &:hover, &:focus {
+    color: #7859CF;
+  }
+
+  &:active svg {
+    fill: #593CAC;
+  }
+
+  &:active {
+    color: #593CAC;
   }
 }

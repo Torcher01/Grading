@@ -25,6 +25,21 @@
   background-color: #FFFFFF;
   margin-left: 20px;
   padding: 9px 99px 7px 100px;
+
+  &:focus, &:hover {
+    background-color: #9070EC;
+    color: #FFFFFF;
+  }
+
+  &:active {
+    background-color: #593CAC;
+    color: #FFFFFF;
+  }
+
+  &:disabled {
+    background-color: #BDBDBD;
+    color: #FFFFFF;
+  }
 }
 
 
