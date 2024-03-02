@@ -61,6 +61,14 @@
 
 .footer__link {
   display: block;
+
+  &:hover, &:focus {
+    color: #9070EC;
+  }
+
+  &:active {
+    color: #593CAC;
+  }
 }
 
 .footer__section-flex-wrapper {

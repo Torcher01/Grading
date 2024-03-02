@@ -11,11 +11,19 @@
 <header class="header">
   <div class="container">
     <div class="header__flex-wrapper">
-      <img class="header__logo" src="images/logo.svg" width="32" height="36" alt="Логотип">
-      <img class="header__login-button" src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
-      <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
-      <img class="header__burger-menu-open" src="images/icons/burger-menu.svg" width="16" height="12"
-           alt="Развернуть меню">
+      <a class="header__logo" href="#">
+        <img src="images/logo.svg" width="32" height="36" alt="Логотип">
+      </a>
+      <a class="header__login-button header__link" href="#">
+        <img  src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
+      </a>
+      <a class="header__cart-button header__link" href="#">
+        <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
+      </a>
+      <button class="header__burger-menu-open header__link">
+        <img src="images/icons/burger-menu.svg" width="16" height="12"
+             alt="Развернуть меню">
+      </button>
     </div>
   </div>
 </header>
@@ -86,7 +94,7 @@
           </div>
           <div class="price-sorting__value">
             <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price" name="min-price"
-                   value="0">
+                   placeholder="0">
             <div class="price-sorting__separator"></div>
             <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
         </fieldset>
@@ -139,8 +147,8 @@
               <span class="country-of-origin__styled-switcher"></span>
               <span class="country-of-origin__country-name">Коста-Рика</span>
             </label>
-            <label class="country-of-origin__label">
-              <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled>
+            <label class="country-of-origin__label country-of-origin__disabled-label">
+              <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled checked>
               <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
               <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
             </label>

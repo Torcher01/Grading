@@ -43,9 +43,14 @@
   background-size: 10px;
   background-position-x: 144px;
   background-position-y: 8px;
+  outline: none;
 
   &:active {
     background-image: url("../../images/sort-arrow-up.svg");
+  }
+
+  &:focus, &:hover {
+    background-color: #F0EBFF;
   }
 }
 

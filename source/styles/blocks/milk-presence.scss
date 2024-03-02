@@ -23,7 +23,17 @@
     background-color: #FFFFFF;
   }
 
-  &:checked ~ ::after {
+  &:hover:not(:disabled) ~ .milk-presence__radio-styled,
+  &:focus ~ .milk-presence__radio-styled {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:hover:not(:disabled) ~ .milk-presence__radio-styled,
+  &:checked ~ .milk-presence__radio-styled {
+    border-color: #9070EC;
+  }
+
+  &:checked ~ :after {
     content: "";
     position: absolute;
     display: block;
@@ -34,6 +44,14 @@
     border-radius: 50%;
     background: #7859CF;
   }
+
+  &:checked:disabled ~ :after {
+    background-color: #E2E2E2;
+  }
+
+  &:checked:disabled ~ .milk-presence__radio-styled {
+    border-color: #E2E2E2;
+  }
 }
 
 .milk-presence__radio-styled {
@@ -43,7 +61,7 @@
   top: -1px;
   width: 21px;
   height: 20px;
-  border: 2px solid #7859CF;
+  border: 2px solid #BDBDBD;
   border-radius: 50%;
 }
 
