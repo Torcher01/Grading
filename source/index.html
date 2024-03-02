@@ -12,10 +12,27 @@
   <div class="container">
     <div class="header__flex-wrapper">
       <a class="header__logo" href="#">
-        <img src="images/logo.svg" width="32" height="36" alt="Логотип">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/tablet/header_logo_tablet.svg">
+          <img src="images/mobile/header_logo_mobile.svg" width="32" height="36" alt="Логотип">
+        </picture>
       </a>
+      <div class="header__menu">
+        <a class="header__menu-link header__menu-link--active" href="#">
+          Главная
+        </a>
+        <a class="header__menu-link" href="#">
+          Каталог
+        </a>
+        <a class="header__menu-link" href="#">
+          Доставка
+        </a>
+        <a class="header__menu-link" href="#">
+          О нас
+        </a>
+      </div>
       <a class="header__login-button header__link" href="#">
-        <img  src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
+        <img src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
       </a>
       <a class="header__cart-button header__link" href="#">
         <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
@@ -31,6 +48,12 @@
   <section class="slider">
     <div class="container">
       <picture>
+        <source media="(min-width: 768px)" type="image/webp"
+                srcset="images/tablet/slider/slider_flat_white_tablet@1x.webp 1x,
+                images/tablet/slider/slider_flat_white_tablet@2x.webp 2x">
+        <source media="(min-width: 768px)"
+                srcset="images/tablet/slider/slider_flat_white_tablet@1x.png 1x,
+                images/tablet/slider/slider_flat_white_tablet@2x.png 2x">
         <source type="image/webp"
                 srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
                  images/mobile/slider/flat_white_slider_mobile_img@2x.webp 2x">
@@ -41,8 +64,9 @@
       <div class="slider__slide-description slide-description">
         <p class="section-header">Новинка!</p>
         <h2 class="slide-description__header">Декаф Флэт Уайт</h2>
-        <p class="slide-description__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
-          молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+        <p class="slide-description__description">Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным
+          фермерским
+          молоком — то, что нужно<br> для расслабления после тяжёлого рабочего дня</p>
         <div class="slide-description__flex-wrapper">
           <span class="slide-description__price">225₽</span>
           <button class="button slide-description__order-button">Заказать</button>
@@ -54,28 +78,44 @@
     <div class="container">
       <div class="features__flex-wrapper">
         <p class="section-header section-header--features">Преимущества</p>
-        <h2 class="features__header">Главные причины выбрать Drink2Go</h2>
-
-        <img class="features__icon" src="images/feature_speed.svg" width="50" height="56"
-             alt="Иконка, изображающая секундомер">
-        <h3 class="features__feature-header features__feature-header--speed">Скорость</h3>
-        <p class="features__feature-description">Готовый напиток всегда под рукой — просто открой банку</p>
-
-        <img class="features__icon" src="images/feature_convenience.svg" width="52" height="56"
-             alt="Иконка, изображающая карман">
-        <h3 class="features__feature-header features__feature-header--convenience">Удобство</h3>
-        <p class="features__feature-description">Легко помещается и в карман,<br>
-          и в маленькую сумочку</p>
-
-        <img class="features__icon" src="images/feature_courage.svg" width="42" height="56"
-             alt="Иконка, изображающая молнию">
-        <h3 class="features__feature-header features__feature-header--courage">Бодрость</h3>
-        <p class="features__feature-description">Сбалансированная доза кофеина<br> даст мощный заряд энергии</p>
-
-        <img class="features__icon" src="images/feature_eco.svg" width="46" height="56"
-             alt="Иконка, изображающая лист дерева">
-        <h3 class="features__feature-header features__feature-header--eco">Экологичность</h3>
-        <p class="features__feature-description">Вся упаковка сделана<br> из перерабатываемых материалов</p>
+        <h2 class="features__header">Главные причины выбрать <span>Drink2Go</span></h2>
+        <div class="features__grid-wrapper">
+          <div class="features__feature">
+            <img class="features__icon features__icon--speed" src="images/feature_speed.svg" width="50" height="56"
+                 alt="Иконка, изображающая секундомер">
+            <div class="features__feature-wrapper">
+              <h3 class="features__feature-header">Скорость</h3>
+              <p class="features__feature-description">Готовый напиток всегда под рукой — просто открой банку</p>
+            </div>
+          </div>
+          <div class="features__feature">
+            <img class="features__icon features__icon--convenience" src="images/feature_convenience.svg" width="52"
+                 height="56"
+                 alt="Иконка, изображающая карман">
+            <div class="features__feature-wrapper">
+              <h3 class="features__feature-header">Удобство</h3>
+              <p class="features__feature-description">Легко помещается и в карман,<br>
+                и в маленькую сумочку</p>
+            </div>
+          </div>
+          <div class="features__feature">
+            <img class="features__icon features__icon--courage" src="images/feature_courage.svg" width="42" height="56"
+                 alt="Иконка, изображающая молнию">
+            <div class="features__feature-wrapper">
+              <h3 class="features__feature-header">Бодрость</h3>
+              <p class="features__feature-description">Сбалансированная доза кофеина<br> даст мощный заряд энергии</p>
+            </div>
+          </div>
+          <div class="features__feature">
+            <img class="features__icon features__icon--eco" src="images/feature_eco.svg" width="46" height="56"
+                 alt="Иконка, изображающая лист дерева">
+            <div class="features__feature-wrapper">
+              <h3 class="features__feature-header">Экологичность</h3>
+              <p class="features__feature-description features__feature-description--eco">Вся упаковка сделана<br> из
+                перерабатываемых материалов</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -84,78 +124,83 @@
       <p class="section-header section-header--catalog">Каталог</p>
       <h2 class="catalog__header">Каталог кофейных напитков</h2>
       <form class="catalog__sorting-form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__fieldset price-sorting">
-          <p class="form__label">Цена</p>
-          <div class="price-sorting__range">
-            <div class="price-sorting__slider"></div>
-            <div class="price-sorting__interval"></div>
-            <div class="price-sorting__interval-blocked"></div>
-            <div class="price-sorting__slider price-sorting__slider--max"></div>
-          </div>
-          <div class="price-sorting__value">
-            <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price" name="min-price"
-                   placeholder="0">
-            <div class="price-sorting__separator"></div>
-            <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
-        </fieldset>
-        <fieldset class="form__fieldset milk-presence">
-          <p class="form__label">Наличие молока</p>
-          <div class="milk-presence__flex-wrapper">
-            <label class="milk-presence__label">
-              <input class="milk-presence__radio" type="radio" name="milk-presence" value="not-important" checked>
-              Неважно
-              <span class="milk-presence__radio-styled"></span>
-            </label>
-            <label class="milk-presence__label">
-              <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-animal-milk">
-              Только животное
-              <span class="milk-presence__radio-styled"></span>
-            </label>
-            <label class="milk-presence__label">
-              <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-plant-milk">
-              Только растительное
-              <span class="milk-presence__radio-styled"></span>
-            </label>
-            <label class="milk-presence__label milk-presence__disabled">
-              <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
-                     value="without-milk" disabled>
-              Без молока
-              <span class="milk-presence__radio-styled milk-presence__disabled"></span>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="form__fieldset country-of-origin">
-          <p class="form__label">Страна произрастания</p>
-          <div class="country-of-origin__flex-wrapper">
-            <label class="country-of-origin__label">
-              <input class="country-of-origin__switcher" type="checkbox" id="brazil" name="brazil" checked>
-              <span class="country-of-origin__styled-switcher"></span>
-              <span class="country-of-origin__country-name">Бразилия</span>
-            </label>
-            <label class="country-of-origin__label">
-              <input class="country-of-origin__switcher" type="checkbox" id="ethiopia" name="ethiopia">
-              <span class="country-of-origin__styled-switcher"></span>
-              <span class="country-of-origin__country-name">Эфиопия</span>
-            </label>
-            <label class="country-of-origin__label">
-              <input class="country-of-origin__switcher" type="checkbox" id="colombia" name="colombia">
-              <span class="country-of-origin__styled-switcher"></span>
-              <span class="country-of-origin__country-name">Колумбия</span>
-            </label>
-            <label class="country-of-origin__label">
-              <input class="country-of-origin__switcher" type="checkbox" id="costa-rica" name="costa-rica">
-              <span class="country-of-origin__styled-switcher"></span>
-              <span class="country-of-origin__country-name">Коста-Рика</span>
-            </label>
-            <label class="country-of-origin__label country-of-origin__disabled-label">
-              <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled checked>
-              <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
-              <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
-            </label>
-          </div>
-        </fieldset>
-        <button class="button form__submit-button" type="submit">Применить</button>
-        <input class="button form__clear-button" type="reset" value="Сбросить">
+        <div class="form__fieldset-flex-wrapper">
+          <fieldset class="form__fieldset price-sorting">
+            <p class="form__label">Цена</p>
+            <div class="price-sorting__range">
+              <div class="price-sorting__slider"></div>
+              <div class="price-sorting__interval"></div>
+              <div class="price-sorting__interval-blocked"></div>
+              <div class="price-sorting__slider price-sorting__slider--max"></div>
+            </div>
+            <div class="price-sorting__value">
+              <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price"
+                     name="min-price"
+                     placeholder="0">
+              <div class="price-sorting__separator"></div>
+              <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
+          </fieldset>
+          <fieldset class="form__fieldset milk-presence">
+            <p class="form__label">Наличие молока</p>
+            <div class="milk-presence__flex-wrapper">
+              <label class="milk-presence__label">
+                <input class="milk-presence__radio" type="radio" name="milk-presence" value="not-important" checked>
+                Неважно
+                <span class="milk-presence__radio-styled"></span>
+              </label>
+              <label class="milk-presence__label">
+                <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-animal-milk">
+                Только животное
+                <span class="milk-presence__radio-styled"></span>
+              </label>
+              <label class="milk-presence__label">
+                <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-plant-milk">
+                Только растительное
+                <span class="milk-presence__radio-styled"></span>
+              </label>
+              <label class="milk-presence__label milk-presence__disabled">
+                <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
+                       value="without-milk" disabled>
+                Без молока
+                <span class="milk-presence__radio-styled milk-presence__disabled"></span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset country-of-origin">
+            <p class="form__label">Страна произрастания</p>
+            <div class="country-of-origin__flex-wrapper">
+              <label class="country-of-origin__label">
+                <input class="country-of-origin__switcher" type="checkbox" id="brazil" name="brazil" checked>
+                <span class="country-of-origin__styled-switcher"></span>
+                <span class="country-of-origin__country-name">Бразилия</span>
+              </label>
+              <label class="country-of-origin__label">
+                <input class="country-of-origin__switcher" type="checkbox" id="ethiopia" name="ethiopia">
+                <span class="country-of-origin__styled-switcher"></span>
+                <span class="country-of-origin__country-name">Эфиопия</span>
+              </label>
+              <label class="country-of-origin__label">
+                <input class="country-of-origin__switcher" type="checkbox" id="colombia" name="colombia">
+                <span class="country-of-origin__styled-switcher"></span>
+                <span class="country-of-origin__country-name">Колумбия</span>
+              </label>
+              <label class="country-of-origin__label">
+                <input class="country-of-origin__switcher" type="checkbox" id="costa-rica" name="costa-rica">
+                <span class="country-of-origin__styled-switcher"></span>
+                <span class="country-of-origin__country-name">Коста-Рика</span>
+              </label>
+              <label class="country-of-origin__label country-of-origin__disabled-label">
+                <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled>
+                <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
+                <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__buttons-wrapper">
+          <button class="button form__submit-button" type="submit">Применить</button>
+          <input class="button form__clear-button" type="reset" value="Сбросить">
+        </div>
       </form>
       <div class="catalog__sorting">
         <p class="catalog__sorting-label">Сортировка:</p>
@@ -177,7 +222,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -197,7 +242,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -217,7 +262,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -237,7 +282,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -257,7 +302,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -277,7 +322,7 @@
           </picture>
           <h3 class="products__card-header">Декаф Флэт Уайт</h3>
           <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br> молоком</p>
+            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
           <div class="products__card-buy-block">
             <span class="products__card-price">225₽</span>
             <button class="button products__card-buy-button" type="button">
@@ -289,13 +334,13 @@
       </div>
       <div class="catalog__pagination">
         <button class="catalog__pagination-button catalog__pagination-back" type="button">
+          <span>Назад</span>
           <svg width="6.000000" height="10.000000" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs/>
             <path id="Vector 4 (Stroke)" d="M4.80859 0L6 1.23901L2.3833 5L6 8.76099L4.80859 10L0 5L4.80859 0Z"
                   fill-opacity="1.000000" fill-rule="evenodd"/>
           </svg>
-
         </button>
         <a class="catalog__pagination-number" href="#">
           1
@@ -307,6 +352,7 @@
           3
         </a>
         <button class="catalog__pagination-button catalog__pagination-forward" type="button">
+          <span>Вперёд</span>
           <svg width="6.000000" height="10.000000" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs/>
@@ -319,22 +365,29 @@
     </div>
   </section>
   <section class="map">
-    <div class="container">
-      <picture>
-        <source type="image/webp"
-                srcset="images/mobile/map_mobile@1x.webp 1x,
+    <picture>
+      <source media="(min-width: 768px)" type="image/webp"
+              srcset="images/tablet/map_tablet@1x.webp 1x,
+                images/tablet/map_tablet@2x.webp 2x">
+      <source media="(min-width: 768px)"
+              srcset="images/tablet/map_tablet@1x.png 1x,
+                images/tablet/map_tablet@2x.png 2x">
+      <source type="image/webp"
+              srcset="images/mobile/map_mobile@1x.webp 1x,
                  images/mobile/map_mobile@2x.webp 2x">
-        <img class="map__img" src="images/mobile/map_mobile@1x.png" width="320px" height="420"
-             alt="Карта с расположением магазина" srcset="images/mobile/map_mobile@2x.png 2x">
-      </picture>
-    </div>
+      <img class="map__img" src="images/mobile/map_mobile@1x.png" width="320px" height="420"
+           alt="Карта с расположением магазина" srcset="images/mobile/map_mobile@2x.png 2x">
+    </picture>
   </section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer__logo-social">
       <a class="footer__logo" href="#">
-        <img src="images/footer_logo.svg" width="82" height="36" alt="Логотип">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/tablet/footer_logo_tablet.svg">
+          <img src="images/mobile/footer_logo_mobile.svg" width="82" height="36" alt="Логотип">
+        </picture>
       </a>
       <div class="footer__social">
         <a class="footer__social-link" href="#">
@@ -367,7 +420,8 @@
         </a>
       </div>
     </div>
-    <div class="footer__section">
+    <div class="footer__flex-wrapper">
+      <div class="footer__section footer__site-map">
       <h3 class="footer__block-header">
         Интернет-магазин
       </h3>
@@ -376,25 +430,26 @@
       <a class="footer__link" href="#">Способы оплаты</a>
       <a class="footer__link" href="#">О нас</a>
     </div>
-    <div class="footer__section">
-      <h3 class="footer__block-header">
-        Медиа
-      </h3>
-      <a class="footer__link" href="#">Блог</a>
-      <a class="footer__link" href="#">Информация для СМИ</a>
-      <a class="footer__link" href="#">Правовая информация</a>
-    </div>
-    <div class="footer__section footer__contacts">
-      <h3 class="footer__block-header footer__contacts-header">
-        Контакты
-      </h3>
-      <div class="footer__section-flex-wrapper">
-        <img src="images/navigation_icon.svg" width="13" height="16" alt="">
-        <p class="footer__contacts-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+      <div class="footer__section">
+        <h3 class="footer__block-header">
+          Медиа
+        </h3>
+        <a class="footer__link" href="#">Блог</a>
+        <a class="footer__link" href="#">Информация для СМИ</a>
+        <a class="footer__link" href="#">Правовая информация</a>
       </div>
-      <div class="footer__section-flex-wrapper">
-        <img src="images/phone_icon.svg" width="13" height="16" alt="">
-        <p class="footer__contacts-text">+7 (999) 999-99-99</p>
+      <div class="footer__section footer__contacts">
+        <h3 class="footer__block-header footer__contacts-header">
+          Контакты
+        </h3>
+        <div class="footer__section-flex-wrapper">
+          <img src="images/navigation_icon.svg" width="13" height="16" alt="">
+          <p class="footer__contacts-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+        </div>
+        <div class="footer__section-flex-wrapper">
+          <img src="images/phone_icon.svg" width="13" height="16" alt="">
+          <p class="footer__contacts-text">+7 (999) 999-99-99</p>
+        </div>
       </div>
     </div>
     <a class="footer__developer-data" href="https://htmlacademy.ru/intensive/adaptive">

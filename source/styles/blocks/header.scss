@@ -33,3 +33,57 @@
   border: none;
   padding: 13px 10px 12px 10px;
 }
+
+.header__menu {
+ display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header__flex-wrapper {
+    margin-top: 6px;
+    margin-bottom: 1px;
+  }
+
+  .header__logo {
+    margin-right: 67px;
+  }
+
+  .header__logo img{
+    width: 82px;
+    height: 36px;
+  }
+
+  .header__burger-menu-open {
+    display: none;
+  }
+
+  .header__menu {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-top: -3px;
+  }
+
+  .header__menu-link {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    text-decoration: none;
+    padding: 29px 20px;
+
+    &:active {
+      background-color: #F0EBFF;
+    }
+  }
+
+  .header__menu-link--active {
+    border-bottom: 2px solid #7859CF;
+  }
+
+  .header__login-button {
+    margin-left: 71px;
+  }
+}

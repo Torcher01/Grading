@@ -13,3 +13,14 @@
   padding-top: 50px;
   margin-bottom: -15px;
 }
+
+@media (min-width: $tablet-width) {
+
+  .section-header {
+    padding-top: 60px;
+  }
+
+  .section-header--catalog {
+    padding-top: 81px;
+  }
+}

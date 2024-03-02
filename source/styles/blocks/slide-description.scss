@@ -45,3 +45,29 @@
   padding: 9px 20px 7px;
   color: #FFFFFF;
 }
+
+@media (min-width: $tablet-width) {
+  .slide-description__header {
+    font-size: 56px;
+    line-height: 79px;
+    letter-spacing: 1.1px;
+    margin-left: 5px;
+    margin-bottom: 16px;
+  }
+
+  .slide-description__description {
+    font-size: 20px;
+    line-height: 32px;
+    width: 768px;
+    margin-left: 0;
+    margin-bottom: 21px;
+  }
+
+  .slide-description__price {
+    margin-left: 270px;
+  }
+
+  .slide-description__flex-wrapper {
+    padding-bottom: 307px;
+  }
+}

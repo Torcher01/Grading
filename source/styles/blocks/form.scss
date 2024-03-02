@@ -42,5 +42,25 @@
   }
 }
 
+@media (min-width: $tablet-width) {
 
+  .form__fieldset-flex-wrapper {
+    display: flex;
+  }
 
+  .form__buttons-wrapper {
+    margin-left: 226px;
+    margin-top: 9px;
+  }
+
+  .form__submit-button {
+    width: 137px;
+    padding: 8px 4px 8px 8px;
+    margin-right: -4px;
+  }
+
+  .form__clear-button {
+    width: 120px;
+    padding: 10px 10px 10px 11px;
+  }
+}

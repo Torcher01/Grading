@@ -33,3 +33,83 @@
   margin: 0 0 31px;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+
+  .features br {
+    display: none;
+  }
+
+  .features__flex-wrapper {
+    margin-bottom: 69px;
+  }
+
+  .features__grid-wrapper {
+    display: grid;
+    grid-template-columns: 355px 366px;
+    gap: 17px 16px;
+    margin-left: 31px;
+  }
+
+  .features__header {
+    font-size: 42px;
+    line-height: 63px;
+    margin-left: -12px;
+    margin-bottom: 60px;
+
+    & span {
+      margin-left: 11px;
+      line-height: 64px;
+    }
+  }
+
+  .features__feature {
+    display: flex;
+  }
+
+  .features__feature-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features__feature-header {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 11px;
+  }
+
+  .features__feature-description {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    min-width: auto;
+    width: 270px;
+  }
+
+  .features__feature-description--eco {
+    width: 200px;
+  }
+
+  .features__icon--speed {
+    margin-top: 4px;
+    margin-right: 21px;
+  }
+
+  .features__icon--courage {
+    margin-left: 4px;
+    margin-top: 1px;
+    margin-right: 25px;
+  }
+
+  .features__icon--convenience {
+    margin-left: -2px;
+    margin-top: -1px;
+    margin-right: 19px;
+  }
+
+  .features__icon--eco {
+    margin-top: 5px;
+    margin-right: 23px;
+  }
+}

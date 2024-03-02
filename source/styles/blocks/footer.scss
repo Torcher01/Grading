@@ -128,3 +128,48 @@
     color: #593CAC;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .footer__logo {
+    margin-right: 398px;
+
+    & img {
+      width: 170px;
+      height: 36px;
+    }
+  }
+
+  .footer__logo-social {
+    border: none;
+    padding-bottom: 5px;
+  }
+
+  .footer__section {
+    border: none;
+  }
+
+  .footer__flex-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .footer__site-map {
+    margin-right: 87px;
+  }
+
+  .footer__contacts {
+    margin-left: 72px;
+  }
+
+  .footer__contacts-text {
+    width: 200px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .footer__developer-data {
+    margin-left: 281px;
+  }
+}

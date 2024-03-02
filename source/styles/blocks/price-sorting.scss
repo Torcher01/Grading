@@ -85,3 +85,39 @@
   top: 20px;
   left: 156px;
 }
+
+@media (min-width: $tablet-width) {
+
+  .price-sorting {
+    margin-right: 10px;
+  }
+
+  .price-sorting__range {
+    margin-bottom: 63px;
+  }
+
+  .price-sorting__interval {
+    width: 176px;
+  }
+
+  .price-sorting__interval-blocked {
+    left: 217px;
+  }
+
+  .price-sorting__separator {
+    top: 19px;
+    left: 127px;
+  }
+
+  .price-sorting__slider--max {
+    left: 200px;
+  }
+
+  .price-sorting__input {
+    width: 83px;
+  }
+
+  .price-sorting__input--left {
+    margin-right: 29px;
+  }
+}

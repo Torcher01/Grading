@@ -70,3 +70,10 @@
   color: #E2E2E2;
   border-color: #E2E2E2;
 }
+
+@media (min-width: $tablet-width) {
+
+  .milk-presence {
+    margin-right: 22px;
+  }
+}

@@ -64,3 +64,54 @@
     margin-left: 10px;
   }
 }
+
+@media (min-width: $tablet-width) {
+
+  .products {
+    display: grid;
+    grid-template-columns: 379px auto;
+    gap: 10px 0;
+  }
+
+  .products__product-card {
+    width: 350px;
+    padding-bottom: 10px;
+  }
+
+  .products__card-header {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 26px 0 0 30px;
+  }
+
+  .products__card-image {
+    margin-left: 108px;
+    margin-top: 51px;
+  }
+
+  .products__card-description {
+    width: 280px;
+    margin: 10px 0 20px 30px;
+  }
+
+  .products__card-description-br {
+    display: none;
+  }
+
+  .products__card-price {
+    margin-left: 28px;
+    margin-right: 100px;
+  }
+
+  .products__card-buy-button {
+    padding-right: 19px;
+
+    & span {
+      margin-left: 9px;
+    }
+
+    & img {
+      top: 10px;
+    }
+  }
+}
