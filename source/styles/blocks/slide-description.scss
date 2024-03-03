@@ -4,7 +4,11 @@
   line-height: 48px;
   text-align: center;
   letter-spacing: 0.8px;
-  margin: 0 4px 10px 0;
+  margin: 0 10px 10px 0;
+
+  & span {
+    margin-left: 10px;
+  }
 }
 
 .slide-description__description {
@@ -14,6 +18,10 @@
   line-height: 20px;
   text-align: center;
   margin: 0 0 20px 19px;
+
+  & br {
+    display: none;
+  }
 }
 
 .slide-description__flex-wrapper {
@@ -51,16 +59,24 @@
     font-size: 56px;
     line-height: 79px;
     letter-spacing: 1.1px;
-    margin-left: 5px;
+    margin-left: 12px;
     margin-bottom: 16px;
+
+    & span {
+      margin: 0;
+    }
   }
 
   .slide-description__description {
     font-size: 20px;
     line-height: 32px;
-    width: 768px;
-    margin-left: 0;
+    width: 570px;
+    margin-left: 100px;
     margin-bottom: 21px;
+
+    & br {
+      display: inline;
+    }
   }
 
   .slide-description__price {
@@ -77,7 +93,7 @@
     padding-bottom: 241px;
   }
   .slide-description__header {
-    margin-left: 575px;
+    margin-left: 580px;
     margin-bottom: 16px;
   }
 

@@ -21,11 +21,11 @@
   }
 
   .section-header--catalog {
-    padding-top: 81px;
+    padding-top: 79px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .section-header {
     padding-top: 181px;
     margin-left: 105px;

@@ -1,5 +1,5 @@
 .map {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .map__img {
@@ -8,6 +8,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .map {
+    margin-bottom: 35px;
+  }
+
   .map__img {
     height: 480px;
   }

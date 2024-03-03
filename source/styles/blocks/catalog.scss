@@ -7,6 +7,10 @@
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+
+  & span {
+    margin-left: -6px;
+  }
 }
 
 .catalog__sorting-form {
@@ -55,12 +59,12 @@
 }
 
 .catalog__products {
-  margin-bottom: 22px;
+  margin-bottom: 17px;
 }
 
 .catalog__pagination {
   margin-left: 20px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
 }
 
 .catalog__pagination-button {
@@ -141,7 +145,11 @@
   .catalog__header {
     font-size: 42px;
     line-height: 64px;
-    margin: 19px 0 20px;
+    margin: 20px 0;
+
+    & span {
+      margin: 0;
+    }
   }
 
   .catalog__sorting-form {
