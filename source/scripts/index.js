@@ -1,1 +1,1 @@
-/* в этот файл добавляет скрипты*/
+import './open-burger-menu.js'
