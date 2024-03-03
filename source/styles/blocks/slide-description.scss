@@ -71,3 +71,23 @@
     padding-bottom: 307px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slide-description__flex-wrapper {
+    padding-bottom: 241px;
+  }
+  .slide-description__header {
+    margin-left: 575px;
+    margin-bottom: 16px;
+  }
+
+  .slide-description__description {
+    text-align: left;
+    margin-left: 735px;
+    margin-bottom: 41px;
+  }
+
+  .slide-description__price {
+    margin-left: 736px;
+  }
+}

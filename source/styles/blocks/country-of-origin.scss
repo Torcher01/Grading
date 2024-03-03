@@ -104,3 +104,17 @@
     background-color: #F8F8F8;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .country-of-origin__country-name {
+    margin-left: 93px;
+  }
+
+  .country-of-origin__label {
+    width: 81px;
+  }
+
+  .country-of-origin__styled-switcher {
+    left: 40px;
+  }
+}

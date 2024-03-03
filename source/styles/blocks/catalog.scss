@@ -190,3 +190,30 @@
     width: 105px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog__sorting-products-flex-wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  .catalog__header {
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+
+  .catalog__sorting {
+    position: absolute;
+    left: 652px;
+  }
+
+  .catalog__products {
+    margin-top: 52px;
+    margin-bottom: 40px;
+  }
+
+  .catalog__pagination {
+    margin-left: 1004px;
+    padding-bottom: 121px;
+  }
+}

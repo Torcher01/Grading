@@ -112,6 +112,38 @@
 
     & img {
       top: 10px;
+      left: 20px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products {
+    grid-template-columns: 317px 317px 317px;
+    gap: 10px 30px;
+  }
+
+  .products__product-card {
+    width: 317px;
+
+    &:hover, &:focus {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .products__card-image {
+    margin-left: 93px;
+  }
+
+  .products__card-description {
+    width: 270px;
+  }
+
+  .products__card-price {
+    margin-right: 67px;
+  }
+
+  .products__card-buy-button span {
+    margin-left: 10px;
   }
 }

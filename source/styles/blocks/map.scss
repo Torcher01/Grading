@@ -12,3 +12,13 @@
     height: 480px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .map {
+    margin-bottom: 25px;
+  }
+
+  .map__img {
+    height: 540px;
+  }
+}

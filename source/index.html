@@ -13,10 +13,12 @@
     <div class="header__flex-wrapper">
       <a class="header__logo" href="#">
         <picture>
+          <source media="(min-width: 1440px" srcset="images/desktop/logo_desktop.svg">
           <source media="(min-width: 768px)" srcset="images/tablet/header_logo_tablet.svg">
           <img src="images/mobile/header_logo_mobile.svg" width="32" height="36" alt="Логотип">
         </picture>
       </a>
+      <p class="header__info">Интернет-магазин кофейных напитков</p>
       <div class="header__menu">
         <a class="header__menu-link header__menu-link--active" href="#">
           Главная
@@ -33,9 +35,11 @@
       </div>
       <a class="header__login-button header__link" href="#">
         <img src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
+        <span>Войти</span>
       </a>
       <a class="header__cart-button header__link" href="#">
         <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
+        <span>Корзина</span>
       </a>
       <button class="header__burger-menu-open header__link">
         <img src="images/icons/burger-menu.svg" width="16" height="12"
@@ -48,6 +52,12 @@
   <section class="slider">
     <div class="container">
       <picture>
+        <source media="(min-width: 1440px)" type="image/webp"
+                srcset="images/desktop/slider/slider_flat_white_desktop@1x.webp 1x,
+                images/desktop/slider/slider_flat_white_desktop@2x.webp 2x">
+        <source media="(min-width: 1440px)"
+                srcset="images/desktop/slider/slider_flat_white_desktop@1x.png 1x,
+                images/desktop/slider/slider_flat_white_desktop@2x.png 2x">
         <source media="(min-width: 768px)" type="image/webp"
                 srcset="images/tablet/slider/slider_flat_white_tablet@1x.webp 1x,
                 images/tablet/slider/slider_flat_white_tablet@2x.webp 2x">
@@ -84,7 +94,7 @@
             <img class="features__icon features__icon--speed" src="images/feature_speed.svg" width="50" height="56"
                  alt="Иконка, изображающая секундомер">
             <div class="features__feature-wrapper">
-              <h3 class="features__feature-header">Скорость</h3>
+              <h3 class="features__feature-header features__feature-header--speed">Скорость</h3>
               <p class="features__feature-description">Готовый напиток всегда под рукой — просто открой банку</p>
             </div>
           </div>
@@ -93,8 +103,9 @@
                  height="56"
                  alt="Иконка, изображающая карман">
             <div class="features__feature-wrapper">
-              <h3 class="features__feature-header">Удобство</h3>
-              <p class="features__feature-description">Легко помещается и в карман,<br>
+              <h3 class="features__feature-header features__feature-header--convenience">Удобство</h3>
+              <p class="features__feature-description features__feature-description--convenience">Легко помещается и в
+                карман,<br>
                 и в маленькую сумочку</p>
             </div>
           </div>
@@ -102,15 +113,16 @@
             <img class="features__icon features__icon--courage" src="images/feature_courage.svg" width="42" height="56"
                  alt="Иконка, изображающая молнию">
             <div class="features__feature-wrapper">
-              <h3 class="features__feature-header">Бодрость</h3>
-              <p class="features__feature-description">Сбалансированная доза кофеина<br> даст мощный заряд энергии</p>
+              <h3 class="features__feature-header features__feature-header--courage">Бодрость</h3>
+              <p class="features__feature-description features__feature-description--courage">Сбалансированная доза
+                кофеина<br> даст мощный заряд энергии</p>
             </div>
           </div>
           <div class="features__feature">
             <img class="features__icon features__icon--eco" src="images/feature_eco.svg" width="46" height="56"
                  alt="Иконка, изображающая лист дерева">
             <div class="features__feature-wrapper">
-              <h3 class="features__feature-header">Экологичность</h3>
+              <h3 class="features__feature-header features__feature-header--eco">Экологичность</h3>
               <p class="features__feature-description features__feature-description--eco">Вся упаковка сделана<br> из
                 перерабатываемых материалов</p>
             </div>
@@ -123,212 +135,286 @@
     <div class="container">
       <p class="section-header section-header--catalog">Каталог</p>
       <h2 class="catalog__header">Каталог кофейных напитков</h2>
-      <form class="catalog__sorting-form form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form__fieldset-flex-wrapper">
-          <fieldset class="form__fieldset price-sorting">
-            <p class="form__label">Цена</p>
-            <div class="price-sorting__range">
-              <div class="price-sorting__slider"></div>
-              <div class="price-sorting__interval"></div>
-              <div class="price-sorting__interval-blocked"></div>
-              <div class="price-sorting__slider price-sorting__slider--max"></div>
-            </div>
-            <div class="price-sorting__value">
-              <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price"
-                     name="min-price"
-                     placeholder="0">
-              <div class="price-sorting__separator"></div>
-              <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
-          </fieldset>
-          <fieldset class="form__fieldset milk-presence">
-            <p class="form__label">Наличие молока</p>
-            <div class="milk-presence__flex-wrapper">
-              <label class="milk-presence__label">
-                <input class="milk-presence__radio" type="radio" name="milk-presence" value="not-important" checked>
-                Неважно
-                <span class="milk-presence__radio-styled"></span>
-              </label>
-              <label class="milk-presence__label">
-                <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-animal-milk">
-                Только животное
-                <span class="milk-presence__radio-styled"></span>
-              </label>
-              <label class="milk-presence__label">
-                <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-plant-milk">
-                Только растительное
-                <span class="milk-presence__radio-styled"></span>
-              </label>
-              <label class="milk-presence__label milk-presence__disabled">
-                <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
-                       value="without-milk" disabled>
-                Без молока
-                <span class="milk-presence__radio-styled milk-presence__disabled"></span>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="form__fieldset country-of-origin">
-            <p class="form__label">Страна произрастания</p>
-            <div class="country-of-origin__flex-wrapper">
-              <label class="country-of-origin__label">
-                <input class="country-of-origin__switcher" type="checkbox" id="brazil" name="brazil" checked>
-                <span class="country-of-origin__styled-switcher"></span>
-                <span class="country-of-origin__country-name">Бразилия</span>
-              </label>
-              <label class="country-of-origin__label">
-                <input class="country-of-origin__switcher" type="checkbox" id="ethiopia" name="ethiopia">
-                <span class="country-of-origin__styled-switcher"></span>
-                <span class="country-of-origin__country-name">Эфиопия</span>
-              </label>
-              <label class="country-of-origin__label">
-                <input class="country-of-origin__switcher" type="checkbox" id="colombia" name="colombia">
-                <span class="country-of-origin__styled-switcher"></span>
-                <span class="country-of-origin__country-name">Колумбия</span>
-              </label>
-              <label class="country-of-origin__label">
-                <input class="country-of-origin__switcher" type="checkbox" id="costa-rica" name="costa-rica">
-                <span class="country-of-origin__styled-switcher"></span>
-                <span class="country-of-origin__country-name">Коста-Рика</span>
-              </label>
-              <label class="country-of-origin__label country-of-origin__disabled-label">
-                <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled>
-                <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
-                <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
-              </label>
-            </div>
-          </fieldset>
+      <div class="catalog__sorting-products-flex-wrapper">
+        <form class="catalog__sorting-form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__fieldset-flex-wrapper">
+            <fieldset class="form__fieldset price-sorting">
+              <p class="form__label">Цена</p>
+              <div class="price-sorting__range">
+                <div class="price-sorting__slider"></div>
+                <div class="price-sorting__interval"></div>
+                <div class="price-sorting__interval-blocked"></div>
+                <div class="price-sorting__slider price-sorting__slider--max"></div>
+              </div>
+              <div class="price-sorting__value">
+                <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price"
+                       name="min-price"
+                       placeholder="0">
+                <div class="price-sorting__separator"></div>
+                <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
+            </fieldset>
+            <fieldset class="form__fieldset milk-presence">
+              <p class="form__label">Наличие молока</p>
+              <div class="milk-presence__flex-wrapper">
+                <label class="milk-presence__label">
+                  <input class="milk-presence__radio" type="radio" name="milk-presence" value="not-important" checked>
+                  Неважно
+                  <span class="milk-presence__radio-styled"></span>
+                </label>
+                <label class="milk-presence__label">
+                  <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-animal-milk">
+                  Только животное
+                  <span class="milk-presence__radio-styled"></span>
+                </label>
+                <label class="milk-presence__label">
+                  <input class="milk-presence__radio" type="radio" name="milk-presence" value="only-plant-milk">
+                  Только растительное
+                  <span class="milk-presence__radio-styled"></span>
+                </label>
+                <label class="milk-presence__label milk-presence__disabled">
+                  <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
+                         value="without-milk" disabled>
+                  Без молока
+                  <span class="milk-presence__radio-styled milk-presence__disabled"></span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset country-of-origin">
+              <p class="form__label">Страна произрастания</p>
+              <div class="country-of-origin__flex-wrapper">
+                <label class="country-of-origin__label">
+                  <input class="country-of-origin__switcher" type="checkbox" id="brazil" name="brazil" checked>
+                  <span class="country-of-origin__styled-switcher"></span>
+                  <span class="country-of-origin__country-name">Бразилия</span>
+                </label>
+                <label class="country-of-origin__label">
+                  <input class="country-of-origin__switcher" type="checkbox" id="ethiopia" name="ethiopia">
+                  <span class="country-of-origin__styled-switcher"></span>
+                  <span class="country-of-origin__country-name">Эфиопия</span>
+                </label>
+                <label class="country-of-origin__label">
+                  <input class="country-of-origin__switcher" type="checkbox" id="colombia" name="colombia">
+                  <span class="country-of-origin__styled-switcher"></span>
+                  <span class="country-of-origin__country-name">Колумбия</span>
+                </label>
+                <label class="country-of-origin__label">
+                  <input class="country-of-origin__switcher" type="checkbox" id="costa-rica" name="costa-rica">
+                  <span class="country-of-origin__styled-switcher"></span>
+                  <span class="country-of-origin__country-name">Коста-Рика</span>
+                </label>
+                <label class="country-of-origin__label country-of-origin__disabled-label">
+                  <input class="country-of-origin__switcher" type="checkbox" id="peru" name="peru" disabled>
+                  <span class="country-of-origin__styled-switcher country-of-origin__disabled"></span>
+                  <span class="country-of-origin__country-name country-of-origin__disabled-text">Перу</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form__buttons-wrapper">
+            <button class="button form__submit-button" type="submit">Применить</button>
+            <input class="button form__clear-button" type="reset" value="Сбросить">
+          </div>
+        </form>
+        <div class="catalog__sorting">
+          <p class="catalog__sorting-label">Сортировка:</p>
+          <select class="catalog__sorting-group">
+            <option>по умолчанию</option>
+            <option>дороже</option>
+            <option>дешевле</option>
+          </select>
         </div>
-        <div class="form__buttons-wrapper">
-          <button class="button form__submit-button" type="submit">Применить</button>
-          <input class="button form__clear-button" type="reset" value="Сбросить">
-        </div>
-      </form>
-      <div class="catalog__sorting">
-        <p class="catalog__sorting-label">Сортировка:</p>
-        <select class="catalog__sorting-group">
-          <option>по умолчанию</option>
-          <option>дороже</option>
-          <option>дешевле</option>
-        </select>
-      </div>
-      <div class="catalog__products products">
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/white_can_mobile@1x.webp 1x,
+        <div class="catalog__products products">
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/white_can_desktop@1x.webp 1x,
+                images/desktop/catalog/white_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/white_can_desktop@1x.png 1x,
+                images/desktop/catalog/white_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/white_can_tablet@1x.webp 1x,
+                images/tablet/catalog/white_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/white_can_tablet@1x.png 1x,
+                images/tablet/catalog/white_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/white_can_mobile@1x.webp 1x,
                         images/mobile/catalog/white_can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/white_can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, белая банка" srcset="images/mobile/catalog/white_can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/white_can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, белая банка" srcset="images/mobile/catalog/white_can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/purple_can_mobile@1x.webp 1x,
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/purple_can_desktop@1x.webp 1x,
+                images/desktop/catalog/purple_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/purple_can_desktop@1x.png 1x,
+                images/desktop/catalog/purple_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/purple_can_tablet@1x.webp 1x,
+                images/tablet/catalog/purple_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/purple_can_tablet@1x.png 1x,
+                images/tablet/catalog/purple_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/purple_can_mobile@1x.webp 1x,
                         images/mobile/catalog/purple_can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/purple_can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, фиолетовая банка" srcset="images/mobile/catalog/purple_can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/purple_can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, фиолетовая банка" srcset="images/mobile/catalog/purple_can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/black_can_mobile@1x.webp 1x,
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/black_can_desktop@1x.webp 1x,
+                images/desktop/catalog/black_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/black_can_desktop@1x.png 1x,
+                images/desktop/catalog/black_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/black_can_tablet@1x.webp 1x,
+                images/tablet/catalog/black_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/black_can_tablet@1x.png 1x,
+                images/tablet/catalog/black_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/black_can_mobile@1x.webp 1x,
                  images/mobile/catalog/black_can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/black_can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, чёрная банка" srcset="images/mobile/catalog/black_can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/black_can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, чёрная банка" srcset="images/mobile/catalog/black_can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/pink__can_mobile@1x.webp 1x,
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/pink_can_desktop@1x.webp 1x,
+                images/desktop/catalog/pink_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/pink_can_desktop@1x.png 1x,
+                images/desktop/catalog/pink_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/pink_can_tablet@1x.webp 1x,
+                images/tablet/catalog/pink_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/pink_can_tablet@1x.png 1x,
+                images/tablet/catalog/pink_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/pink__can_mobile@1x.webp 1x,
                  images/mobile/catalog/pink__can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/pink__can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, розовая банка" srcset="images/mobile/catalog/pink__can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/pink__can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, розовая банка" srcset="images/mobile/catalog/pink__can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/brown_can_mobile@1x.webp 1x,
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/brown_can_desktop@1x.webp 1x,
+                images/desktop/catalog/brown_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/brown_can_desktop@1x.png 1x,
+                images/desktop/catalog/brown_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/brown_can_tablet@1x.webp 1x,
+                images/tablet/catalog/brown_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/brown_can_tablet@1x.png 1x,
+                images/tablet/catalog/brown_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/brown_can_mobile@1x.webp 1x,
                  images/mobile/catalog/brown_can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/brown_can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, коричневая банка" srcset="images/mobile/catalog/brown_can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/brown_can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, коричневая банка" srcset="images/mobile/catalog/brown_can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="products__product-card">
-          <picture>
-            <source type="image/webp"
-                    srcset="images/mobile/catalog/beige_can_mobile@1x.webp 1x,
+          <div class="products__product-card">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="images/desktop/catalog/biege_can_desktop@1x.webp 1x,
+                images/desktop/catalog/biege_can_desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                      srcset="images/desktop/catalog/biege_can_desktop@1x.png 1x,
+                images/desktop/catalog/biege_can_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                      srcset="images/tablet/catalog/biege_can_tablet@1x.webp 1x,
+                images/tablet/catalog/biege_can_tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                      srcset="images/tablet/catalog/biege_can_tablet@1x.png 1x,
+                images/tablet/catalog/biege_can_tablet@2x.png 2x">
+              <source type="image/webp"
+                      srcset="images/mobile/catalog/beige_can_mobile@1x.webp 1x,
                  images/mobile/catalog/beige_can_mobile@2x.webp 2x">
-            <img class="products__card-image" src="images/mobile/catalog/beige_can_mobile@1x.png" width="130"
-                 height="188"
-                 alt="Фотография товара, бежевая банка" srcset="images/mobile/catalog/beige_can_mobile@2x.png 2x">
-          </picture>
-          <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-          <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-            с натуральным фермерским<br class="products__card-description-br"> молоком</p>
-          <div class="products__card-buy-block">
-            <span class="products__card-price">225₽</span>
-            <button class="button products__card-buy-button" type="button">
-              <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
-              <span>В корзину</span>
-            </button>
+              <img class="products__card-image" src="images/mobile/catalog/beige_can_mobile@1x.png" width="130"
+                   height="188"
+                   alt="Фотография товара, бежевая банка" srcset="images/mobile/catalog/beige_can_mobile@2x.png 2x">
+            </picture>
+            <h3 class="products__card-header">Декаф Флэт Уайт</h3>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <div class="products__card-buy-block">
+              <span class="products__card-price">225₽</span>
+              <button class="button products__card-buy-button" type="button">
+                <img src="images/card_buy_button_icon.svg" width="20" height="16" alt="">
+                <span>В корзину</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -366,6 +452,12 @@
   </section>
   <section class="map">
     <picture>
+      <source media="(min-width: 1440px)" type="image/webp"
+              srcset="images/desktop/map_desktop@1x.webp 1x,
+                images/desktop/map_desktop@2x.webp 2x">
+      <source media="(min-width: 1440px)"
+              srcset="images/desktop/map_desktop@1x.png 1x,
+                images/desktop/map_desktop@2x.png 2x">
       <source media="(min-width: 768px)" type="image/webp"
               srcset="images/tablet/map_tablet@1x.webp 1x,
                 images/tablet/map_tablet@2x.webp 2x">
@@ -382,73 +474,76 @@
 </main>
 <footer class="footer">
   <div class="container">
-    <div class="footer__logo-social">
-      <a class="footer__logo" href="#">
-        <picture>
-          <source media="(min-width: 768px)" srcset="images/tablet/footer_logo_tablet.svg">
-          <img src="images/mobile/footer_logo_mobile.svg" width="82" height="36" alt="Логотип">
-        </picture>
-      </a>
-      <div class="footer__social">
-        <a class="footer__social-link" href="#">
-          <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs/>
-            <path id="vk"
-                  d="M1.40588 1.40601C0 2.81177 0 5.07446 0 9.6001L0 10.3999C0 14.9255 0 17.1882 1.40588 18.5942C2.81177 20 5.07446 20 9.59998 20L10.4 20C14.9255 20 17.1882 20 18.5941 18.5942C20 17.1882 20 14.9255 20 10.3999L20 9.6001C20 5.07446 20 2.81177 18.5941 1.40601C17.1882 0 14.9255 0 10.4 0L9.59998 0C5.07446 0 2.81177 0 1.40588 1.40601ZM3.375 6.0835C3.4834 11.2834 6.08337 14.4084 10.6417 14.4084L10.9 14.4084L10.9 11.4333C12.5751 11.6001 13.8417 12.825 14.35 14.4084L16.7167 14.4084C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.6167 15.8583 8.1167 16.2167 6.0835L14.0665 6.0835C13.6 7.7334 12.2168 9.2334 10.9 9.375L10.9 6.0835L8.75 6.0835L8.75 11.8501C7.41663 11.5166 5.7334 9.90015 5.65833 6.0835L3.375 6.0835Z"
-                  fill-opacity="1.000000" fill-rule="evenodd"/>
-          </svg>
+    <div class="footer__logo-contacts-flex-wrapper">
+      <div class="footer__logo-social">
+        <a class="footer__logo" href="#">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/tablet/footer_logo_tablet.svg">
+            <img src="images/mobile/footer_logo_mobile.svg" width="82" height="36" alt="Логотип">
+          </picture>
         </a>
-        <a class="footer__social-link" href="#">
-          <svg width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs/>
-            <path id="pinterest"
-                  d="M11 0C4.92493 0 0 4.92505 0 11C0 15.6602 2.89941 19.644 6.99133 21.2468C6.89514 20.3765 6.80823 19.0378 7.02942 18.0879C7.22937 17.2292 8.31934 12.6201 8.31934 12.6201C8.31934 12.6201 7.99023 11.9612 7.99023 10.9871C7.99023 9.45752 8.87683 8.31543 9.98071 8.31543C10.9192 8.31543 11.3724 9.02002 11.3724 9.86499C11.3724 10.8088 10.7716 12.22 10.4614 13.5276C10.2023 14.6223 11.0105 15.5151 12.0903 15.5151C14.0454 15.5151 15.5483 13.4539 15.5483 10.478C15.5483 7.84424 13.6558 6.00293 10.9535 6.00293C7.82361 6.00293 5.98657 8.35034 5.98657 10.7766C5.98657 11.7219 6.35071 12.7358 6.80518 13.2869C6.89502 13.3958 6.9082 13.4912 6.88147 13.6023C6.79797 13.9497 6.61243 14.697 6.57593 14.8499C6.52795 15.0513 6.4165 15.094 6.20813 14.9968C4.83423 14.3574 3.97534 12.3489 3.97534 10.7356C3.97534 7.26562 6.49646 4.07886 11.2434 4.07886C15.0593 4.07886 18.0247 6.7981 18.0247 10.4319C18.0247 14.2229 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6948 9.79541 16.0107C9.79541 16.0107 9.2439 18.1111 9.11023 18.6257C8.86182 19.5813 8.19141 20.7788 7.74304 21.5095C8.77222 21.8281 9.86597 22 11 22C17.0751 22 22 17.0752 22 11C22 4.92505 17.0751 0 11 0Z"
-                  fill-opacity="1.000000" fill-rule="nonzero"/>
-          </svg>
-        </a>
-        <a class="footer__social-link" href="#">
-          <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs/>
-            <path id="ok"
-                  d="M1.40002 1.3999C0 2.81201 0 5.07397 0 9.6001L0 10.3999L0 10.5137C-0.00012207 14.97 -0.00012207 17.2117 1.40002 18.6001C2.81201 20 5.07397 20 9.59998 20L10.4 20L10.5132 20C14.9698 20 17.2117 20.0002 18.6 18.6001C20 17.188 20 14.926 20 10.3999L20 9.6001L20 9.48682C20.0001 5.03027 20.0001 2.78833 18.6 1.3999C17.188 0 14.926 0 10.4 0L9.59998 0L9.48633 0C5.03003 0 2.78821 -0.000244141 1.40002 1.3999ZM10.0194 10.1973C11.6876 10.1973 13.0476 8.83716 13.0476 7.16895C13.0476 5.50073 11.6876 4.14062 10.0194 4.14062C8.33301 4.14062 6.9729 5.50073 6.9729 7.16895C6.9729 8.83716 8.33301 10.1973 10.0194 10.1973ZM10.0194 5.91772C10.7084 5.91772 11.2706 6.47974 11.2706 7.16895C11.2706 7.85791 10.7084 8.42017 10.0194 8.42017C9.33032 8.42017 8.76819 7.85791 8.76819 7.16895C8.75 6.47974 9.31213 5.91772 10.0194 5.91772ZM11.2343 12.6814C11.8508 12.5364 12.4492 12.3008 12.9933 11.9561C13.4103 11.7021 13.5372 11.1401 13.2653 10.7231C13.0115 10.3059 12.4492 10.179 12.0322 10.4512C10.7991 11.2307 9.1853 11.2307 7.95215 10.4512C7.53503 10.1973 6.99109 10.3059 6.71912 10.7231C6.4834 11.1401 6.61023 11.6841 7.02734 11.938C7.57141 12.2825 8.1698 12.5183 8.78625 12.6633L7.09985 14.3499C6.75537 14.6943 6.75537 15.2563 7.09985 15.6011C7.28125 15.7822 7.49878 15.8547 7.73462 15.8547C7.97034 15.8547 8.18787 15.7642 8.36926 15.6011L10.0375 13.9326L11.7058 15.6011C12.0503 15.9456 12.6124 15.9456 12.9569 15.6011C13.3015 15.2563 13.3015 14.6943 12.9569 14.3499L11.2343 12.6814Z"
-                  fill-opacity="1.000000" fill-rule="evenodd"/>
-          </svg>
+        <span class="footer__logo-description">Интернет-магазин кофейных напитков</span>
+        <div class="footer__social">
+          <a class="footer__social-link" href="#">
+            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs/>
+              <path id="vk"
+                    d="M1.40588 1.40601C0 2.81177 0 5.07446 0 9.6001L0 10.3999C0 14.9255 0 17.1882 1.40588 18.5942C2.81177 20 5.07446 20 9.59998 20L10.4 20C14.9255 20 17.1882 20 18.5941 18.5942C20 17.1882 20 14.9255 20 10.3999L20 9.6001C20 5.07446 20 2.81177 18.5941 1.40601C17.1882 0 14.9255 0 10.4 0L9.59998 0C5.07446 0 2.81177 0 1.40588 1.40601ZM3.375 6.0835C3.4834 11.2834 6.08337 14.4084 10.6417 14.4084L10.9 14.4084L10.9 11.4333C12.5751 11.6001 13.8417 12.825 14.35 14.4084L16.7167 14.4084C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.6167 15.8583 8.1167 16.2167 6.0835L14.0665 6.0835C13.6 7.7334 12.2168 9.2334 10.9 9.375L10.9 6.0835L8.75 6.0835L8.75 11.8501C7.41663 11.5166 5.7334 9.90015 5.65833 6.0835L3.375 6.0835Z"
+                    fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#">
+            <svg width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs/>
+              <path id="pinterest"
+                    d="M11 0C4.92493 0 0 4.92505 0 11C0 15.6602 2.89941 19.644 6.99133 21.2468C6.89514 20.3765 6.80823 19.0378 7.02942 18.0879C7.22937 17.2292 8.31934 12.6201 8.31934 12.6201C8.31934 12.6201 7.99023 11.9612 7.99023 10.9871C7.99023 9.45752 8.87683 8.31543 9.98071 8.31543C10.9192 8.31543 11.3724 9.02002 11.3724 9.86499C11.3724 10.8088 10.7716 12.22 10.4614 13.5276C10.2023 14.6223 11.0105 15.5151 12.0903 15.5151C14.0454 15.5151 15.5483 13.4539 15.5483 10.478C15.5483 7.84424 13.6558 6.00293 10.9535 6.00293C7.82361 6.00293 5.98657 8.35034 5.98657 10.7766C5.98657 11.7219 6.35071 12.7358 6.80518 13.2869C6.89502 13.3958 6.9082 13.4912 6.88147 13.6023C6.79797 13.9497 6.61243 14.697 6.57593 14.8499C6.52795 15.0513 6.4165 15.094 6.20813 14.9968C4.83423 14.3574 3.97534 12.3489 3.97534 10.7356C3.97534 7.26562 6.49646 4.07886 11.2434 4.07886C15.0593 4.07886 18.0247 6.7981 18.0247 10.4319C18.0247 14.2229 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6948 9.79541 16.0107C9.79541 16.0107 9.2439 18.1111 9.11023 18.6257C8.86182 19.5813 8.19141 20.7788 7.74304 21.5095C8.77222 21.8281 9.86597 22 11 22C17.0751 22 22 17.0752 22 11C22 4.92505 17.0751 0 11 0Z"
+                    fill-opacity="1.000000" fill-rule="nonzero"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#">
+            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs/>
+              <path id="ok"
+                    d="M1.40002 1.3999C0 2.81201 0 5.07397 0 9.6001L0 10.3999L0 10.5137C-0.00012207 14.97 -0.00012207 17.2117 1.40002 18.6001C2.81201 20 5.07397 20 9.59998 20L10.4 20L10.5132 20C14.9698 20 17.2117 20.0002 18.6 18.6001C20 17.188 20 14.926 20 10.3999L20 9.6001L20 9.48682C20.0001 5.03027 20.0001 2.78833 18.6 1.3999C17.188 0 14.926 0 10.4 0L9.59998 0L9.48633 0C5.03003 0 2.78821 -0.000244141 1.40002 1.3999ZM10.0194 10.1973C11.6876 10.1973 13.0476 8.83716 13.0476 7.16895C13.0476 5.50073 11.6876 4.14062 10.0194 4.14062C8.33301 4.14062 6.9729 5.50073 6.9729 7.16895C6.9729 8.83716 8.33301 10.1973 10.0194 10.1973ZM10.0194 5.91772C10.7084 5.91772 11.2706 6.47974 11.2706 7.16895C11.2706 7.85791 10.7084 8.42017 10.0194 8.42017C9.33032 8.42017 8.76819 7.85791 8.76819 7.16895C8.75 6.47974 9.31213 5.91772 10.0194 5.91772ZM11.2343 12.6814C11.8508 12.5364 12.4492 12.3008 12.9933 11.9561C13.4103 11.7021 13.5372 11.1401 13.2653 10.7231C13.0115 10.3059 12.4492 10.179 12.0322 10.4512C10.7991 11.2307 9.1853 11.2307 7.95215 10.4512C7.53503 10.1973 6.99109 10.3059 6.71912 10.7231C6.4834 11.1401 6.61023 11.6841 7.02734 11.938C7.57141 12.2825 8.1698 12.5183 8.78625 12.6633L7.09985 14.3499C6.75537 14.6943 6.75537 15.2563 7.09985 15.6011C7.28125 15.7822 7.49878 15.8547 7.73462 15.8547C7.97034 15.8547 8.18787 15.7642 8.36926 15.6011L10.0375 13.9326L11.7058 15.6011C12.0503 15.9456 12.6124 15.9456 12.9569 15.6011C13.3015 15.2563 13.3015 14.6943 12.9569 14.3499L11.2343 12.6814Z"
+                    fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
 
-        </a>
-      </div>
-    </div>
-    <div class="footer__flex-wrapper">
-      <div class="footer__section footer__site-map">
-      <h3 class="footer__block-header">
-        Интернет-магазин
-      </h3>
-      <a class="footer__link" href="#">Каталог</a>
-      <a class="footer__link" href="#">Доставка</a>
-      <a class="footer__link" href="#">Способы оплаты</a>
-      <a class="footer__link" href="#">О нас</a>
-    </div>
-      <div class="footer__section">
-        <h3 class="footer__block-header">
-          Медиа
-        </h3>
-        <a class="footer__link" href="#">Блог</a>
-        <a class="footer__link" href="#">Информация для СМИ</a>
-        <a class="footer__link" href="#">Правовая информация</a>
-      </div>
-      <div class="footer__section footer__contacts">
-        <h3 class="footer__block-header footer__contacts-header">
-          Контакты
-        </h3>
-        <div class="footer__section-flex-wrapper">
-          <img src="images/navigation_icon.svg" width="13" height="16" alt="">
-          <p class="footer__contacts-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+          </a>
         </div>
-        <div class="footer__section-flex-wrapper">
-          <img src="images/phone_icon.svg" width="13" height="16" alt="">
-          <p class="footer__contacts-text">+7 (999) 999-99-99</p>
+      </div>
+      <div class="footer__flex-wrapper">
+        <div class="footer__section footer__site-map">
+          <h3 class="footer__block-header">
+            Интернет-магазин
+          </h3>
+          <a class="footer__link" href="#">Каталог</a>
+          <a class="footer__link" href="#">Доставка</a>
+          <a class="footer__link" href="#">Способы оплаты</a>
+          <a class="footer__link" href="#">О нас</a>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__block-header">
+            Медиа
+          </h3>
+          <a class="footer__link" href="#">Блог</a>
+          <a class="footer__link" href="#">Информация для СМИ</a>
+          <a class="footer__link" href="#">Правовая информация</a>
+        </div>
+        <div class="footer__section footer__contacts">
+          <h3 class="footer__block-header footer__contacts-header">
+            Контакты
+          </h3>
+          <div class="footer__section-flex-wrapper">
+            <img src="images/navigation_icon.svg" width="13" height="16" alt="">
+            <p class="footer__contacts-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+          </div>
+          <div class="footer__section-flex-wrapper">
+            <img src="images/phone_icon.svg" width="13" height="16" alt="">
+            <p class="footer__contacts-text">+7 (999) 999-99-99</p>
+          </div>
         </div>
       </div>
     </div>

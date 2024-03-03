@@ -22,3 +22,20 @@
     height: 476px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slider {
+    margin: 0;
+  }
+
+  .slider__slide-description {
+    margin: 0;
+  }
+
+  .slider__flat-white-img {
+    width: 600px;
+    height: 600px;
+    left: 85px;
+    top: 10px;
+  }
+}
