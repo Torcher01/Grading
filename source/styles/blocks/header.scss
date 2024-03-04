@@ -1,7 +1,7 @@
 .header__burger-menu {
   position: absolute;
   z-index: 2;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .header__burger-menu-link {
@@ -14,14 +14,14 @@
   color: #333333;
   padding: 20px 125px;
   text-align: center;
-  border-top: 1px solid #F0EBFF;
+  border-top: 1px solid #f0ebff;
 
   &:last-child {
-    border-bottom: 1px solid #F0EBFF;
+    border-bottom: 1px solid #f0ebff;
   }
 
   &:active {
-    background-color: #F0EBFF;
+    background-color: #f0ebff;
   }
 }
 
@@ -60,7 +60,7 @@
   background-color: transparent;
 
   &:active {
-    background-color: #F0EBFF;
+    background-color: #f0ebff;
   }
 }
 
@@ -71,7 +71,7 @@
 }
 
 .header__menu {
- display: none;
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -84,7 +84,7 @@
     margin-right: 67px;
   }
 
-  .header__logo img{
+  .header__logo img {
     width: 82px;
     height: 36px;
   }
@@ -101,6 +101,7 @@
     text-transform: uppercase;
     letter-spacing: 0.4px;
     margin-top: -3px;
+    flex-wrap: wrap;
   }
 
   .header__menu-link {
@@ -111,12 +112,12 @@
     padding: 29px 20px;
 
     &:active {
-      background-color: #F0EBFF;
+      background-color: #f0ebff;
     }
   }
 
   .header__menu-link--active {
-    border-bottom: 2px solid #7859CF;
+    border-bottom: 2px solid #7859cf;
   }
 
   .header__login-button {
@@ -155,6 +156,7 @@
 
   .header__menu-link {
     padding-bottom: 29px;
+
     &:not(:last-child) {
       margin-right: 20px;
     }

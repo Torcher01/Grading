@@ -15,7 +15,7 @@ function createPaginationButtons () {
   return pagination.append(paginationButton);
 }
 
-for (let i = slideCount; i > 0; i-- ) {
+for (let i = slideCount; i > 0; i--) {
   createPaginationButtons();
 }
 
@@ -42,8 +42,8 @@ paginationButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
     slideIndex = index;
     updateSlider();
-  })
-})
+  });
+});
 
 function updateSlider() {
   slides.forEach((slide, index) => {

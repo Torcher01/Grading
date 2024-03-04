@@ -1,7 +1,7 @@
 .footer__logo-social {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F0EBFF;
+  border-bottom: 1px solid #f0ebff;
   padding-bottom: 15px;
 }
 
@@ -22,13 +22,14 @@
   }
 
   & svg {
-    fill: #BDBDBD;
+    fill: #bdbdbd;
     padding: 10px;
   }
 
-  & svg:hover, & svg:focus {
-    fill: #7859CF;
-    background-color: #F0EBFF;
+  & svg:hover,
+  & svg:focus {
+    fill: #7859cf;
+    background-color: #f0ebff;
   }
 
   & svg:active {
@@ -40,12 +41,13 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
-  color: #7859CF;
+  color: #7859cf;
   margin: 0 0 20px;
   letter-spacing: 0.3px;
 }
 
 .footer__link {
+  display: block;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -54,25 +56,22 @@
   color: #333333;
   letter-spacing: 0.3px;
   margin-bottom: 20px;
-}
 
-.footer__section {
-  border-bottom: 1px solid #F0EBFF;
-  padding-bottom: 8px;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-.footer__link {
-  display: block;
-
-  &:hover, &:focus {
-    color: #9070EC;
+  &:hover,
+  &:focus {
+    color: #9070ec;
   }
 
   &:active {
-    color: #593CAC;
+    color: #593cac;
   }
+}
+
+.footer__section {
+  border-bottom: 1px solid #f0ebff;
+  padding-bottom: 8px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .footer__section-flex-wrapper {
@@ -105,31 +104,33 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  color: #BDBDBD;
+  color: #bdbdbd;
   text-decoration: none;
   align-items: center;
   margin-left: 57px;
   letter-spacing: 0.03px;
 
   & svg {
-    fill: #BDBDBD;
+    fill: #bdbdbd;
     margin-left: 4px;
   }
 
-  &:hover svg, &:focus svg {
-    fill: #7859CF;
+  &:hover svg,
+  &:focus svg {
+    fill: #7859cf;
   }
 
-  &:hover, &:focus {
-    color: #7859CF;
+  &:hover,
+  &:focus {
+    color: #7859cf;
   }
 
   &:active svg {
-    fill: #593CAC;
+    fill: #593cac;
   }
 
   &:active {
-    color: #593CAC;
+    color: #593cac;
   }
 }
 
@@ -206,6 +207,7 @@
     margin-left: 40px;
     margin-top: 6px;
   }
+
   .footer__social {
     position: absolute;
     top: 125px;

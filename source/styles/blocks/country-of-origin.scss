@@ -31,20 +31,20 @@
   &:hover:not(:checked):not(:disabled) + .country-of-origin__styled-switcher,
   &:focus:not(:checked):not(:disabled) + .country-of-origin__styled-switcher {
     background-color: rgba(120, 89, 207, 0.25);
-    border-color: #9070EC;
+    border-color: #9070ec;
   }
 
   &:checked + .country-of-origin__styled-switcher {
-    background-color: #7859CF;
+    background-color: #7859cf;
   }
 
   &:focus + .country-of-origin__styled-switcher {
-    box-shadow: 0 0 1px #7859CF;
+    box-shadow: 0 0 1px #7859cf;
   }
 
-  &:checked + .country-of-origin__styled-switcher:before {
-    -webkit-transform: translateX(18px);
-    -ms-transform: translateX(18px);
+  &:checked + .country-of-origin__styled-switcher::before {
+    --webkit-transform: translateX(18px);
+    --ms-transform: translateX(18px);
     transform: translateX(18px);
   }
 
@@ -53,11 +53,11 @@
   }
 
   &:disabled:checked + .country-of-origin__styled-switcher {
-    background-color: #E2E2E2;
+    background-color: #bdbdbd;
   }
 
-  &:disabled + .country-of-origin__styled-switcher:before {
-    background-color: #BDBDBD;
+  &:disabled + .country-of-origin__styled-switcher::before {
+    background-color: #f8f8f8;
   }
 }
 
@@ -68,13 +68,13 @@
   left: 20px;
   right: 0;
   bottom: 1px;
-  background-color: #BDBDBD;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #bdbdbd;
+  --webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
   border: 2px solid transparent;
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     width: 20px;
@@ -82,9 +82,9 @@
     top: 0;
     left: 0;
     bottom: 3px;
-    background-color: #FFFFFF;
-    -webkit-transition: .4s;
-    transition: .4s;
+    background-color: #ffffff;
+    --webkit-transition: 0.4s;
+    transition: 0.4s;
     border-radius: 50%;
   }
 }
@@ -94,14 +94,14 @@
 }
 
 .country-of-origin__disabled-text {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .country-of-origin__disabled {
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
 
-  &:before {
-    background-color: #F8F8F8;
+  &::before {
+    background-color: #f8f8f8;
   }
 }
 

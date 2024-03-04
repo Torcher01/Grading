@@ -1,4 +1,4 @@
-/* global noUiSlider:readonly */
+import noUiSlider from 'nouislider/src/nouislider.js';
 
 const sliderElement = document.querySelector('.price-sorting__range');
 const valueElements = [
@@ -24,7 +24,6 @@ noUiSlider.create(sliderElement, {
   },
 });
 
-sliderElement.noUiSlider.on('update', function (values, handle) {
-  valueElements[handle].value = values[handle]
-})
-
+sliderElement.noUiSlider.on('update',(values, handle) => {
+  valueElements[handle].value = values[handle];
+});

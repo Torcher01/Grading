@@ -20,7 +20,7 @@
   cursor: pointer;
 
   &:checked ~ .milk-presence__radio-styled {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   &:hover:not(:disabled) ~ .milk-presence__radio-styled,
@@ -30,10 +30,10 @@
 
   &:hover:not(:disabled) ~ .milk-presence__radio-styled,
   &:checked ~ .milk-presence__radio-styled {
-    border-color: #9070EC;
+    border-color: #9070ec;
   }
 
-  &:checked ~ :after {
+  &:checked ~ ::after {
     content: "";
     position: absolute;
     display: block;
@@ -42,15 +42,15 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #7859CF;
+    background: #7859cf;
   }
 
-  &:checked:disabled ~ :after {
-    background-color: #E2E2E2;
+  &:checked:disabled ~ ::after {
+    background-color: #e2e2e2;
   }
 
   &:checked:disabled ~ .milk-presence__radio-styled {
-    border-color: #E2E2E2;
+    border-color: #e2e2e2;
   }
 }
 
@@ -61,18 +61,17 @@
   top: -1px;
   width: 21px;
   height: 20px;
-  border: 2px solid #BDBDBD;
+  border: 2px solid #bdbdbd;
   border-radius: 50%;
 }
 
 .milk-presence__disabled {
   cursor: default;
-  color: #E2E2E2;
-  border-color: #E2E2E2;
+  color: #e2e2e2;
+  border-color: #e2e2e2;
 }
 
 @media (min-width: $tablet-width) {
-
   .milk-presence {
     margin-right: 22px;
   }

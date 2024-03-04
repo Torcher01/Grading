@@ -6,7 +6,7 @@
 .products__product-card {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 280px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -51,7 +51,7 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 1.3px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px 20px 7px 37px;
 
   & img {
@@ -66,7 +66,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .products {
     display: grid;
     grid-template-columns: 379px auto;
@@ -126,7 +125,8 @@
   .products__product-card {
     width: 317px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }

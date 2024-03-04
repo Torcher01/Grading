@@ -8,6 +8,6 @@ const burgerMenuToggle = () => {
   burgerMenu.classList.toggle('visually-hidden');
   menuOpenImage.classList.toggle('visually-hidden');
   menuCloseImage.classList.toggle('visually-hidden');
-}
+};
 
-menuOpenButton.addEventListener('click', burgerMenuToggle)
+menuOpenButton.addEventListener('click', burgerMenuToggle);

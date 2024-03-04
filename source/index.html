@@ -5,16 +5,15 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
 </head>
 <body>
-<header class="header">
+<header class="header" data-test="header">
   <div class="container">
     <div class="header__flex-wrapper">
       <a class="header__logo" href="#">
         <picture>
-          <source media="(min-width: 1440px" srcset="images/desktop/logo_desktop.svg">
-          <source media="(min-width: 768px)" srcset="images/tablet/header_logo_tablet.svg">
+          <source media="(min-width: 1440px)" srcset="images/desktop/logo_desktop.svg" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/tablet/header_logo_tablet.svg" type="image/svg+xml">
           <img src="images/mobile/header_logo_mobile.svg" width="32" height="36" alt="Логотип">
         </picture>
       </a>
@@ -34,19 +33,17 @@
         </a>
       </div>
       <a class="header__login-button header__link" href="#">
-        <img src="images/icons/login.svg" width="16" height="16" alt="Вход в личный кабинет">
+        <img src="images/login.svg" width="16" height="16" alt="Вход в личный кабинет">
         <span>Войти</span>
       </a>
       <a class="header__cart-button header__link" href="#">
-        <img class="header__cart-button" src="images/icons/cart.svg" width="16" height="16" alt="Корзина">
+        <img class="header__cart-button" src="images/cart.svg" width="16" height="16" alt="Корзина">
         <span>Корзина</span>
       </a>
-      <button class="header__burger-menu-open header__link">
-        <img class="header__burger-menu-open-img" src="images/icons/burger_open.svg" width="16" height="16"
-             alt="Развернуть меню">
-        <img class="header__burger-menu-close-img visually-hidden" src="images/icons/burger_close.svg" width="16"
-             height="16"
-             alt="Свернуть меню">
+      <button class="header__burger-menu-open header__link js-toggle-button" type="button">
+        <img class="header__burger-menu-open-img" src="images/burger_open.svg" width="16" height="16" alt="">
+        <img class="header__burger-menu-close-img visually-hidden" src="images/burger_close.svg" width="16" height="16" alt="">
+        <span class="visually-hidden">Кнопка открытия меню</span>
       </button>
     </div>
     <div class="header__burger-menu visually-hidden">
@@ -58,24 +55,23 @@
   </div>
 </header>
 <main class="main">
-  <section class="slider">
+  <section class="slider" data-test="hero">
     <div class="container">
-      <button class="slider__switcher slider__switcher-left" type="button">
-        <svg width="11.000000" height="20.000000" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
+      <button class="slider__switcher slider__switcher-left slider-button-prev" type="button">
+        <span class="visually-hidden">Переключить слайд влево</span>
+        <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs/>
-          <path id="Vector 2 (Stroke)" d="M9.7168 0L11 1.3208L2.56689 10L11 18.6792L9.7168 20L0 10L9.7168 0Z"
+          <path d="M9.7168 0L11 1.3208L2.56689 10L11 18.6792L9.7168 20L0 10L9.7168 0Z"
                 fill-opacity="1.000000" fill-rule="evenodd"/>
         </svg>
       </button>
-      <button class="slider__switcher slider__switcher-right" type="button">
-        <svg width="11.000000" height="20.000000" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
+      <button class="slider__switcher slider__switcher-right slider-button-next" type="button">
+        <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs/>
-          <path id="Vector 2 (Stroke)" d="M1.2832 0L0 1.3208L8.43359 10L0 18.6792L1.2832 20L11 10L1.2832 0Z"
+          <path d="M1.2832 0L0 1.3208L8.43359 10L0 18.6792L1.2832 20L11 10L1.2832 0Z"
                 fill-opacity="1.000000" fill-rule="evenodd"/>
         </svg>
-
+        <span class="visually-hidden">Переключить слайд вправо</span>
       </button>
       <div class="slider__wrapper">
         <div class="slider__slide slider__flat-white">
@@ -83,23 +79,21 @@
             <source media="(min-width: 1440px)" type="image/webp"
                     srcset="images/desktop/slider/slider_flat_white_desktop@1x.webp 1x,
                 images/desktop/slider/slider_flat_white_desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)"
+            <source media="(min-width: 1440px)" type="image/png"
                     srcset="images/desktop/slider/slider_flat_white_desktop@1x.png 1x,
                 images/desktop/slider/slider_flat_white_desktop@2x.png 2x">
             <source media="(min-width: 768px)" type="image/webp"
                     srcset="images/tablet/slider/slider_flat_white_tablet@1x.webp 1x,
                 images/tablet/slider/slider_flat_white_tablet@2x.webp 2x">
-            <source media="(min-width: 768px)"
+            <source media="(min-width: 768px)" type="image/png"
                     srcset="images/tablet/slider/slider_flat_white_tablet@1x.png 1x,
                 images/tablet/slider/slider_flat_white_tablet@2x.png 2x">
             <source type="image/webp"
                     srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
-                 images/mobile/slider/flat_white_slider_mobile_img@2x.webp 2x">
-            <img class="slider__img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280"
-                 height="280"
-                 alt="Слайд номер 1: флэт-уайт без кофеина"
-                 srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
+                images/mobile/slider/flat_white_slider_mobile_img@2x.webp 2x">
+            <img class="slider__img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280" height="280" alt="Слайд номер 1: флэт-уайт без кофеина" srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
           </picture>
+
           <div class="slider__slide-description slide-description">
             <p class="section-header">Новинка!</p>
             <h2 class="slide-description__header">Декаф Флэт <span>Уайт</span></h2>
@@ -107,7 +101,7 @@
               фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
             <div class="slide-description__flex-wrapper">
               <span class="slide-description__price">225₽</span>
-              <button class="button slide-description__order-button">Заказать</button>
+              <button class="button slide-description__order-button" type="button">Заказать</button>
             </div>
           </div>
 
@@ -117,22 +111,19 @@
             <source media="(min-width: 1440px)" type="image/webp"
                     srcset="images/desktop/slider/slider_lavender_desktop@1x.webp 1x,
                 images/desktop/slider/slider_lavender_desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)"
+            <source media="(min-width: 1440px)" type="image/png"
                     srcset="images/desktop/slider/slider_lavender_desktop@1x.png 1x,
                 images/desktop/slider/slider_lavender_desktop@2x.png 2x">
             <source media="(min-width: 768px)" type="image/webp"
                     srcset="images/tablet/slider/slider_lavender_tablet@1x.webp 1x,
                 images/tablet/slider/slider_lavender_tablet@2x.webp 2x">
-            <source media="(min-width: 768px)"
+            <source media="(min-width: 768px)" type="image/png"
                     srcset="images/tablet/slider/slider_lavender_tablet@1x.png 1x,
                 images/tablet/slider/slider_lavender_tablet@2x.png 2x">
             <source type="image/webp"
                     srcset="images/mobile/slider/lavender_slider_mobile_img@1x.webp 1x,
-                 images/mobile/slider/lavender_slider_mobile_img@2x.webp 2x">
-            <img class="slider__img" src="images/mobile/slider/lavender_slider_mobile_img@1x.png" width="280"
-                 height="280"
-                 alt="Слайд номер 2: лавандовый латте"
-                 srcset="images/mobile/slider/lavender_slider_mobile_img@2x.png 2x">
+                images/mobile/slider/lavender_slider_mobile_img@2x.webp 2x">
+            <img class="slider__img" src="images/mobile/slider/lavender_slider_mobile_img@1x.png" width="280" height="280" alt="Слайд номер 2: лавандовый латте" srcset="images/mobile/slider/lavender_slider_mobile_img@2x.png 2x">
           </picture>
           <div class="slider__slide-description slide-description">
             <p class="section-header">Новинка!</p>
@@ -142,7 +133,7 @@
               и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
             <div class="slide-description__flex-wrapper">
               <span class="slide-description__price slide-description__price--lavender">265₽</span>
-              <button class="button slide-description__order-button">Заказать</button>
+              <button class="button slide-description__order-button" type="button">Заказать</button>
             </div>
           </div>
 
@@ -152,89 +143,75 @@
             <source media="(min-width: 1440px)" type="image/webp"
                     srcset="images/desktop/slider/slider_espresso_desktop@1x.webp 1x,
                 images/desktop/slider/slider_espresso_desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)"
+            <source media="(min-width: 1440px)" type="image/png"
                     srcset="images/desktop/slider/slider_espresso_desktop@1x.png 1x,
                 images/desktop/slider/slider_espresso_desktop@2x.png 2x">
             <source media="(min-width: 768px)" type="image/webp"
                     srcset="images/tablet/slider/slider_espresso_tablet@1x.webp 1x,
                 images/tablet/slider/slider_espresso_tablet@2x.webp 2x">
-            <source media="(min-width: 768px)"
+            <source media="(min-width: 768px)" type="image/png"
                     srcset="images/tablet/slider/slider_espresso_tablet@1x.png 1x,
                 images/tablet/slider/slider_espresso_tablet@2x.png 2x">
             <source type="image/webp"
                     srcset="images/mobile/slider/espresso_slider_mobile_img@1x.webp 1x,
-                 images/mobile/slider/espresso_slider_mobile_img@2x.webp 2x">
-            <img class="slider__img" src="images/mobile/slider/espresso_slider_mobile_img@1x.png" width="280"
-                 height="280"
-                 alt="Слайд номер 3: тройной эспрессо"
-                 srcset="images/mobile/slider/espresso_slider_mobile_img@2x.png 2x">
+                images/mobile/slider/espresso_slider_mobile_img@2x.webp 2x">
+            <img class="slider__img" src="images/mobile/slider/espresso_slider_mobile_img@1x.png" width="280" height="280" alt="Слайд номер 3: тройной эспрессо" srcset="images/mobile/slider/espresso_slider_mobile_img@2x.png 2x">
           </picture>
           <div class="slider__slide-description slide-description">
             <p class="section-header">Новинка!</p>
             <h2 class="slide-description__header">Тройной Эспрессо</h2>
-            <p class="slide-description__description slide-description__description--espresso">Мощнее укола адреналина,
-              чернее самой тёмной ночи, этот тройной
-              эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <p class="slide-description__description slide-description__description--espresso">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
             <div class="slide-description__flex-wrapper">
               <span class="slide-description__price slide-description__price--espresso">375₽</span>
-              <button class="button slide-description__order-button">Заказать</button>
+              <button class="button slide-description__order-button" type="button">Заказать</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="slider__pagination">
-
-      </div>
+      <div class="slider__pagination slider-pagination"></div>
     </div>
   </section>
-  <section class="features">
+  <section class="features" data-test="features">
     <div class="container">
       <div class="features__flex-wrapper">
         <p class="section-header section-header--features">Преимущества</p>
         <h2 class="features__header"><span>Главные причины</span> выбрать <span>Drink2Go</span></h2>
         <div class="features__grid-wrapper">
           <div class="features__feature">
-            <img class="features__icon features__icon--speed" src="images/feature_speed.svg" width="50" height="56"
-                 alt="Иконка, изображающая секундомер">
+            <img class="features__icon features__icon--speed" src="images/feature_speed.svg" width="50" height="56" alt="Иконка, изображающая секундомер">
             <div class="features__feature-wrapper">
               <h3 class="features__feature-header features__feature-header--speed">Скорость</h3>
               <p class="features__feature-description">Готовый напиток всегда под рукой — просто открой банку</p>
             </div>
           </div>
           <div class="features__feature">
-            <img class="features__icon features__icon--convenience" src="images/feature_convenience.svg" width="52"
-                 height="56"
-                 alt="Иконка, изображающая карман">
+            <img class="features__icon features__icon--convenience" src="images/feature_convenience.svg" width="52" height="56" alt="Иконка, изображающая карман">
             <div class="features__feature-wrapper">
               <h3 class="features__feature-header features__feature-header--convenience">Удобство</h3>
-              <p class="features__feature-description features__feature-description--convenience">Легко помещается и в
-                карман,<br>
+              <p class="features__feature-description features__feature-description--convenience">Легко помещается и в карман,<br>
                 и в маленькую сумочку</p>
             </div>
           </div>
           <div class="features__feature">
-            <img class="features__icon features__icon--courage" src="images/feature_courage.svg" width="42" height="56"
-                 alt="Иконка, изображающая молнию">
+            <img class="features__icon features__icon--courage" src="images/feature_courage.svg" width="42" height="56" alt="Иконка, изображающая молнию">
             <div class="features__feature-wrapper">
               <h3 class="features__feature-header features__feature-header--courage">Бодрость</h3>
               <p class="features__feature-description features__feature-description--courage">Сбалансированная доза
-                кофеина<br> даст мощный заряд энергии</p>
+                кофеина<br>даст мощный заряд энергии</p>
             </div>
           </div>
           <div class="features__feature">
-            <img class="features__icon features__icon--eco" src="images/feature_eco.svg" width="46" height="56"
-                 alt="Иконка, изображающая лист дерева">
+            <img class="features__icon features__icon--eco" src="images/feature_eco.svg" width="46" height="56" alt="Иконка, изображающая лист дерева">
             <div class="features__feature-wrapper">
               <h3 class="features__feature-header features__feature-header--eco">Экологичность</h3>
-              <p class="features__feature-description features__feature-description--eco">Вся упаковка сделана<br> из
-                перерабатываемых материалов</p>
+              <p class="features__feature-description features__feature-description--eco">Вся упаковка сделана<br> из перерабатываемых материалов</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="catalog">
+  <section class="catalog" data-test="catalog">
     <div class="container">
       <p class="section-header section-header--catalog">Каталог</p>
       <h2 class="catalog__header"><span>Каталог кофейных</span> напитков</h2>
@@ -242,22 +219,16 @@
         <form class="catalog__sorting-form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__fieldset-flex-wrapper">
             <fieldset class="form__fieldset price-sorting">
+              <legend class="visually-hidden">Сортировка по цене</legend>
               <p class="form__label">Цена</p>
-<!--              <div class="price-sorting__range">-->
-<!--                <div class="price-sorting__slider"></div>-->
-<!--                <div class="price-sorting__interval"></div>-->
-<!--                <div class="price-sorting__interval-blocked"></div>-->
-<!--                <div class="price-sorting__slider price-sorting__slider&#45;&#45;max"></div>-->
-<!--              </div>-->
               <div class="price-sorting__range" id="slider"></div>
               <div class="price-sorting__value">
-                <input class="price-sorting__input price-sorting__input--left" type="text" id="min-price"
-                       name="min-price"
-                       placeholder="0">
+                <label><input class="price-sorting__input price-sorting__input--left" type="text" id="min-price" name="min-price" placeholder="0"></label>
                 <div class="price-sorting__separator"></div>
-                <input class="price-sorting__input" type="text" id="max-price" name="max-price" value="900"></div>
+                <label><input class="price-sorting__input" type="text" id="max-price" name="max-price" value="900"></label></div>
             </fieldset>
             <fieldset class="form__fieldset milk-presence">
+              <legend class="visually-hidden">Сортировка по наличию молока</legend>
               <p class="form__label">Наличие молока</p>
               <div class="milk-presence__flex-wrapper">
                 <label class="milk-presence__label">
@@ -276,14 +247,14 @@
                   <span class="milk-presence__radio-styled"></span>
                 </label>
                 <label class="milk-presence__label milk-presence__disabled">
-                  <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence"
-                         value="without-milk" disabled>
+                  <input class="milk-presence__radio milk-presence__disabled" type="radio" name="milk-presence" value="without-milk" disabled>
                   Без молока
                   <span class="milk-presence__radio-styled milk-presence__disabled"></span>
                 </label>
               </div>
             </fieldset>
             <fieldset class="form__fieldset country-of-origin">
+              <legend class="visually-hidden">Сортировка по стране произрастания</legend>
               <p class="form__label">Страна произрастания</p>
               <div class="country-of-origin__flex-wrapper">
                 <label class="country-of-origin__label">
@@ -316,12 +287,12 @@
           </div>
           <div class="form__buttons-wrapper">
             <button class="button form__submit-button" type="submit">Применить</button>
-            <input class="button form__clear-button" type="reset" value="Сбросить">
+            <label><input class="button form__clear-button" type="reset" value="Сбросить" name="reset"></label>
           </div>
         </form>
         <div class="catalog__sorting">
           <p class="catalog__sorting-label">Сортировка:</p>
-          <select class="catalog__sorting-group">
+          <select class="catalog__sorting-group" name="sorting-group">
             <option>по умолчанию</option>
             <option>дороже</option>
             <option>дешевле</option>
@@ -333,25 +304,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/white_can_desktop@1x.webp 1x,
                 images/desktop/catalog/white_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/white_can_desktop@1x.png 1x,
                 images/desktop/catalog/white_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/white_can_tablet@1x.webp 1x,
                 images/tablet/catalog/white_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/white_can_tablet@1x.png 1x,
                 images/tablet/catalog/white_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/white_can_mobile@1x.webp 1x,
                         images/mobile/catalog/white_can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/white_can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, белая банка" srcset="images/mobile/catalog/white_can_mobile@2x.png 2x">
+              <img class="products__card-image" src="images/mobile/catalog/white_can_mobile@1x.png" width="130" height="188" alt="Фотография товара, белая банка" srcset="images/mobile/catalog/white_can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -365,25 +333,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/purple_can_desktop@1x.webp 1x,
                 images/desktop/catalog/purple_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/purple_can_desktop@1x.png 1x,
                 images/desktop/catalog/purple_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/purple_can_tablet@1x.webp 1x,
                 images/tablet/catalog/purple_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/purple_can_tablet@1x.png 1x,
                 images/tablet/catalog/purple_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/purple_can_mobile@1x.webp 1x,
                         images/mobile/catalog/purple_can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/purple_can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, фиолетовая банка" srcset="images/mobile/catalog/purple_can_mobile@2x.png 2x">
+              <img class="products__card-image" src="images/mobile/catalog/purple_can_mobile@1x.png" width="130" height="188" alt="Фотография товара, фиолетовая банка" srcset="images/mobile/catalog/purple_can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -397,25 +362,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/black_can_desktop@1x.webp 1x,
                 images/desktop/catalog/black_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/black_can_desktop@1x.png 1x,
                 images/desktop/catalog/black_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/black_can_tablet@1x.webp 1x,
                 images/tablet/catalog/black_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/black_can_tablet@1x.png 1x,
                 images/tablet/catalog/black_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/black_can_mobile@1x.webp 1x,
-                 images/mobile/catalog/black_can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/black_can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, чёрная банка" srcset="images/mobile/catalog/black_can_mobile@2x.png 2x">
+                images/mobile/catalog/black_can_mobile@2x.webp 2x">
+              <img class="products__card-image" src="images/mobile/catalog/black_can_mobile@1x.png" width="130" height="188" alt="Фотография товара, чёрная банка" srcset="images/mobile/catalog/black_can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -429,25 +391,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/pink_can_desktop@1x.webp 1x,
                 images/desktop/catalog/pink_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/pink_can_desktop@1x.png 1x,
                 images/desktop/catalog/pink_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/pink_can_tablet@1x.webp 1x,
                 images/tablet/catalog/pink_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/pink_can_tablet@1x.png 1x,
                 images/tablet/catalog/pink_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/pink__can_mobile@1x.webp 1x,
-                 images/mobile/catalog/pink__can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/pink__can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, розовая банка" srcset="images/mobile/catalog/pink__can_mobile@2x.png 2x">
+                images/mobile/catalog/pink__can_mobile@2x.webp 2x">
+              <img class="products__card-image" src="images/mobile/catalog/pink__can_mobile@1x.png" width="130" height="188" alt="Фотография товара, розовая банка" srcset="images/mobile/catalog/pink__can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -461,25 +420,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/brown_can_desktop@1x.webp 1x,
                 images/desktop/catalog/brown_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/brown_can_desktop@1x.png 1x,
                 images/desktop/catalog/brown_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/brown_can_tablet@1x.webp 1x,
                 images/tablet/catalog/brown_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/brown_can_tablet@1x.png 1x,
                 images/tablet/catalog/brown_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/brown_can_mobile@1x.webp 1x,
-                 images/mobile/catalog/brown_can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/brown_can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, коричневая банка" srcset="images/mobile/catalog/brown_can_mobile@2x.png 2x">
+                images/mobile/catalog/brown_can_mobile@2x.webp 2x">
+              <img class="products__card-image" src="images/mobile/catalog/brown_can_mobile@1x.png" width="130" height="188" alt="Фотография товара, коричневая банка" srcset="images/mobile/catalog/brown_can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -493,25 +449,22 @@
               <source media="(min-width: 1440px)" type="image/webp"
                       srcset="images/desktop/catalog/biege_can_desktop@1x.webp 1x,
                 images/desktop/catalog/biege_can_desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/png"
                       srcset="images/desktop/catalog/biege_can_desktop@1x.png 1x,
                 images/desktop/catalog/biege_can_desktop@2x.png 2x">
               <source media="(min-width: 768px)" type="image/webp"
                       srcset="images/tablet/catalog/biege_can_tablet@1x.webp 1x,
                 images/tablet/catalog/biege_can_tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/png"
                       srcset="images/tablet/catalog/biege_can_tablet@1x.png 1x,
                 images/tablet/catalog/biege_can_tablet@2x.png 2x">
               <source type="image/webp"
                       srcset="images/mobile/catalog/beige_can_mobile@1x.webp 1x,
-                 images/mobile/catalog/beige_can_mobile@2x.webp 2x">
-              <img class="products__card-image" src="images/mobile/catalog/beige_can_mobile@1x.png" width="130"
-                   height="188"
-                   alt="Фотография товара, бежевая банка" srcset="images/mobile/catalog/beige_can_mobile@2x.png 2x">
+                images/mobile/catalog/beige_can_mobile@2x.webp 2x">
+              <img class="products__card-image" src="images/mobile/catalog/beige_can_mobile@1x.png" width="130" height="188" alt="Фотография товара, бежевая банка" srcset="images/mobile/catalog/beige_can_mobile@2x.png 2x">
             </picture>
             <h3 class="products__card-header">Декаф Флэт Уайт</h3>
-            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>
-              с натуральным фермерским<br class="products__card-description-br"> молоком</p>
+            <p class="products__card-description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским<br class="products__card-description-br"> молоком</p>
             <div class="products__card-buy-block">
               <span class="products__card-price">225₽</span>
               <button class="button products__card-buy-button" type="button">
@@ -525,10 +478,9 @@
       <div class="catalog__pagination">
         <button class="catalog__pagination-button catalog__pagination-back" type="button">
           <span>Назад</span>
-          <svg width="6.000000" height="10.000000" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs/>
-            <path id="Vector 4 (Stroke)" d="M4.80859 0L6 1.23901L2.3833 5L6 8.76099L4.80859 10L0 5L4.80859 0Z"
+            <path d="M4.80859 0L6 1.23901L2.3833 5L6 8.76099L4.80859 10L0 5L4.80859 0Z"
                   fill-opacity="1.000000" fill-rule="evenodd"/>
           </svg>
         </button>
@@ -543,78 +495,68 @@
         </a>
         <button class="catalog__pagination-button catalog__pagination-forward" type="button">
           <span>Вперёд</span>
-          <svg width="6.000000" height="10.000000" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs/>
-            <path id="Vector 4 (Stroke)" d="M1.19153 0L0 1.23901L3.61694 5L0 8.76099L1.19153 10L6 5L1.19153 0Z"
-                  fill-opacity="1.000000" fill-rule="evenodd"/>
+            <path d="M1.19153 0L0 1.23901L3.61694 5L0 8.76099L1.19153 10L6 5L1.19153 0Z" fill-opacity="1.000000" fill-rule="evenodd"/>
           </svg>
-
         </button>
       </div>
     </div>
   </section>
-  <section class="map">
+  <section class="map" data-test="map">
+    <h2 class="visually-hidden">Карта</h2>
     <picture>
       <source media="(min-width: 1440px)" type="image/webp"
               srcset="images/desktop/map_desktop@1x.webp 1x,
-                images/desktop/map_desktop@2x.webp 2x">
-      <source media="(min-width: 1440px)"
+              images/desktop/map_desktop@2x.webp 2x">
+      <source media="(min-width: 1440px)" type="image/png"
               srcset="images/desktop/map_desktop@1x.png 1x,
-                images/desktop/map_desktop@2x.png 2x">
+              images/desktop/map_desktop@2x.png 2x">
       <source media="(min-width: 768px)" type="image/webp"
               srcset="images/tablet/map_tablet@1x.webp 1x,
-                images/tablet/map_tablet@2x.webp 2x">
-      <source media="(min-width: 768px)"
+              images/tablet/map_tablet@2x.webp 2x">
+      <source media="(min-width: 768px)" type="image/png"
               srcset="images/tablet/map_tablet@1x.png 1x,
-                images/tablet/map_tablet@2x.png 2x">
+              images/tablet/map_tablet@2x.png 2x">
       <source type="image/webp"
               srcset="images/mobile/map_mobile@1x.webp 1x,
-                 images/mobile/map_mobile@2x.webp 2x">
-      <img class="map__img" src="images/mobile/map_mobile@1x.png" width="320px" height="420"
-           alt="Карта с расположением магазина" srcset="images/mobile/map_mobile@2x.png 2x">
+              images/mobile/map_mobile@2x.webp 2x">
+      <img class="map__img" src="images/mobile/map_mobile@1x.png" width="320" height="420" alt="Карта с расположением магазина" srcset="images/mobile/map_mobile@2x.png 2x">
     </picture>
   </section>
 </main>
-<footer class="footer">
+<footer class="footer" data-test="footer">
   <div class="container">
     <div class="footer__logo-contacts-flex-wrapper">
       <div class="footer__logo-social">
         <a class="footer__logo" href="#">
           <picture>
-            <source media="(min-width: 768px)" srcset="images/tablet/footer_logo_tablet.svg">
+            <source media="(min-width: 768px)" srcset="images/tablet/footer_logo_tablet.svg" type="image/jpg">
             <img src="images/mobile/footer_logo_mobile.svg" width="82" height="36" alt="Логотип">
           </picture>
         </a>
         <span class="footer__logo-description">Интернет-магазин кофейных напитков</span>
         <div class="footer__social">
           <a class="footer__social-link" href="#">
-            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
+            <span class="visually-hidden">Ссылка ВКонтакте</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs/>
-              <path id="vk"
-                    d="M1.40588 1.40601C0 2.81177 0 5.07446 0 9.6001L0 10.3999C0 14.9255 0 17.1882 1.40588 18.5942C2.81177 20 5.07446 20 9.59998 20L10.4 20C14.9255 20 17.1882 20 18.5941 18.5942C20 17.1882 20 14.9255 20 10.3999L20 9.6001C20 5.07446 20 2.81177 18.5941 1.40601C17.1882 0 14.9255 0 10.4 0L9.59998 0C5.07446 0 2.81177 0 1.40588 1.40601ZM3.375 6.0835C3.4834 11.2834 6.08337 14.4084 10.6417 14.4084L10.9 14.4084L10.9 11.4333C12.5751 11.6001 13.8417 12.825 14.35 14.4084L16.7167 14.4084C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.6167 15.8583 8.1167 16.2167 6.0835L14.0665 6.0835C13.6 7.7334 12.2168 9.2334 10.9 9.375L10.9 6.0835L8.75 6.0835L8.75 11.8501C7.41663 11.5166 5.7334 9.90015 5.65833 6.0835L3.375 6.0835Z"
-                    fill-opacity="1.000000" fill-rule="evenodd"/>
+              <path d="M1.40588 1.40601C0 2.81177 0 5.07446 0 9.6001L0 10.3999C0 14.9255 0 17.1882 1.40588 18.5942C2.81177 20 5.07446 20 9.59998 20L10.4 20C14.9255 20 17.1882 20 18.5941 18.5942C20 17.1882 20 14.9255 20 10.3999L20 9.6001C20 5.07446 20 2.81177 18.5941 1.40601C17.1882 0 14.9255 0 10.4 0L9.59998 0C5.07446 0 2.81177 0 1.40588 1.40601ZM3.375 6.0835C3.4834 11.2834 6.08337 14.4084 10.6417 14.4084L10.9 14.4084L10.9 11.4333C12.5751 11.6001 13.8417 12.825 14.35 14.4084L16.7167 14.4084C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.6167 15.8583 8.1167 16.2167 6.0835L14.0665 6.0835C13.6 7.7334 12.2168 9.2334 10.9 9.375L10.9 6.0835L8.75 6.0835L8.75 11.8501C7.41663 11.5166 5.7334 9.90015 5.65833 6.0835L3.375 6.0835Z" fill-opacity="1.000000" fill-rule="evenodd"/>
             </svg>
           </a>
           <a class="footer__social-link" href="#">
-            <svg width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
+            <span class="visually-hidden">Ссылка Pinterest</span>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs/>
-              <path id="pinterest"
-                    d="M11 0C4.92493 0 0 4.92505 0 11C0 15.6602 2.89941 19.644 6.99133 21.2468C6.89514 20.3765 6.80823 19.0378 7.02942 18.0879C7.22937 17.2292 8.31934 12.6201 8.31934 12.6201C8.31934 12.6201 7.99023 11.9612 7.99023 10.9871C7.99023 9.45752 8.87683 8.31543 9.98071 8.31543C10.9192 8.31543 11.3724 9.02002 11.3724 9.86499C11.3724 10.8088 10.7716 12.22 10.4614 13.5276C10.2023 14.6223 11.0105 15.5151 12.0903 15.5151C14.0454 15.5151 15.5483 13.4539 15.5483 10.478C15.5483 7.84424 13.6558 6.00293 10.9535 6.00293C7.82361 6.00293 5.98657 8.35034 5.98657 10.7766C5.98657 11.7219 6.35071 12.7358 6.80518 13.2869C6.89502 13.3958 6.9082 13.4912 6.88147 13.6023C6.79797 13.9497 6.61243 14.697 6.57593 14.8499C6.52795 15.0513 6.4165 15.094 6.20813 14.9968C4.83423 14.3574 3.97534 12.3489 3.97534 10.7356C3.97534 7.26562 6.49646 4.07886 11.2434 4.07886C15.0593 4.07886 18.0247 6.7981 18.0247 10.4319C18.0247 14.2229 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6948 9.79541 16.0107C9.79541 16.0107 9.2439 18.1111 9.11023 18.6257C8.86182 19.5813 8.19141 20.7788 7.74304 21.5095C8.77222 21.8281 9.86597 22 11 22C17.0751 22 22 17.0752 22 11C22 4.92505 17.0751 0 11 0Z"
-                    fill-opacity="1.000000" fill-rule="nonzero"/>
+              <path d="M11 0C4.92493 0 0 4.92505 0 11C0 15.6602 2.89941 19.644 6.99133 21.2468C6.89514 20.3765 6.80823 19.0378 7.02942 18.0879C7.22937 17.2292 8.31934 12.6201 8.31934 12.6201C8.31934 12.6201 7.99023 11.9612 7.99023 10.9871C7.99023 9.45752 8.87683 8.31543 9.98071 8.31543C10.9192 8.31543 11.3724 9.02002 11.3724 9.86499C11.3724 10.8088 10.7716 12.22 10.4614 13.5276C10.2023 14.6223 11.0105 15.5151 12.0903 15.5151C14.0454 15.5151 15.5483 13.4539 15.5483 10.478C15.5483 7.84424 13.6558 6.00293 10.9535 6.00293C7.82361 6.00293 5.98657 8.35034 5.98657 10.7766C5.98657 11.7219 6.35071 12.7358 6.80518 13.2869C6.89502 13.3958 6.9082 13.4912 6.88147 13.6023C6.79797 13.9497 6.61243 14.697 6.57593 14.8499C6.52795 15.0513 6.4165 15.094 6.20813 14.9968C4.83423 14.3574 3.97534 12.3489 3.97534 10.7356C3.97534 7.26562 6.49646 4.07886 11.2434 4.07886C15.0593 4.07886 18.0247 6.7981 18.0247 10.4319C18.0247 14.2229 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6948 9.79541 16.0107C9.79541 16.0107 9.2439 18.1111 9.11023 18.6257C8.86182 19.5813 8.19141 20.7788 7.74304 21.5095C8.77222 21.8281 9.86597 22 11 22C17.0751 22 22 17.0752 22 11C22 4.92505 17.0751 0 11 0Z" fill-opacity="1.000000" fill-rule="nonzero"/>
             </svg>
           </a>
           <a class="footer__social-link" href="#">
-            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
+            <span class="visually-hidden">Ссылка Одноклассники</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs/>
-              <path id="ok"
-                    d="M1.40002 1.3999C0 2.81201 0 5.07397 0 9.6001L0 10.3999L0 10.5137C-0.00012207 14.97 -0.00012207 17.2117 1.40002 18.6001C2.81201 20 5.07397 20 9.59998 20L10.4 20L10.5132 20C14.9698 20 17.2117 20.0002 18.6 18.6001C20 17.188 20 14.926 20 10.3999L20 9.6001L20 9.48682C20.0001 5.03027 20.0001 2.78833 18.6 1.3999C17.188 0 14.926 0 10.4 0L9.59998 0L9.48633 0C5.03003 0 2.78821 -0.000244141 1.40002 1.3999ZM10.0194 10.1973C11.6876 10.1973 13.0476 8.83716 13.0476 7.16895C13.0476 5.50073 11.6876 4.14062 10.0194 4.14062C8.33301 4.14062 6.9729 5.50073 6.9729 7.16895C6.9729 8.83716 8.33301 10.1973 10.0194 10.1973ZM10.0194 5.91772C10.7084 5.91772 11.2706 6.47974 11.2706 7.16895C11.2706 7.85791 10.7084 8.42017 10.0194 8.42017C9.33032 8.42017 8.76819 7.85791 8.76819 7.16895C8.75 6.47974 9.31213 5.91772 10.0194 5.91772ZM11.2343 12.6814C11.8508 12.5364 12.4492 12.3008 12.9933 11.9561C13.4103 11.7021 13.5372 11.1401 13.2653 10.7231C13.0115 10.3059 12.4492 10.179 12.0322 10.4512C10.7991 11.2307 9.1853 11.2307 7.95215 10.4512C7.53503 10.1973 6.99109 10.3059 6.71912 10.7231C6.4834 11.1401 6.61023 11.6841 7.02734 11.938C7.57141 12.2825 8.1698 12.5183 8.78625 12.6633L7.09985 14.3499C6.75537 14.6943 6.75537 15.2563 7.09985 15.6011C7.28125 15.7822 7.49878 15.8547 7.73462 15.8547C7.97034 15.8547 8.18787 15.7642 8.36926 15.6011L10.0375 13.9326L11.7058 15.6011C12.0503 15.9456 12.6124 15.9456 12.9569 15.6011C13.3015 15.2563 13.3015 14.6943 12.9569 14.3499L11.2343 12.6814Z"
-                    fill-opacity="1.000000" fill-rule="evenodd"/>
+              <path d="M1.40002 1.3999C0 2.81201 0 5.07397 0 9.6001L0 10.3999L0 10.5137C-0.00012207 14.97 -0.00012207 17.2117 1.40002 18.6001C2.81201 20 5.07397 20 9.59998 20L10.4 20L10.5132 20C14.9698 20 17.2117 20.0002 18.6 18.6001C20 17.188 20 14.926 20 10.3999L20 9.6001L20 9.48682C20.0001 5.03027 20.0001 2.78833 18.6 1.3999C17.188 0 14.926 0 10.4 0L9.59998 0L9.48633 0C5.03003 0 2.78821 -0.000244141 1.40002 1.3999ZM10.0194 10.1973C11.6876 10.1973 13.0476 8.83716 13.0476 7.16895C13.0476 5.50073 11.6876 4.14062 10.0194 4.14062C8.33301 4.14062 6.9729 5.50073 6.9729 7.16895C6.9729 8.83716 8.33301 10.1973 10.0194 10.1973ZM10.0194 5.91772C10.7084 5.91772 11.2706 6.47974 11.2706 7.16895C11.2706 7.85791 10.7084 8.42017 10.0194 8.42017C9.33032 8.42017 8.76819 7.85791 8.76819 7.16895C8.75 6.47974 9.31213 5.91772 10.0194 5.91772ZM11.2343 12.6814C11.8508 12.5364 12.4492 12.3008 12.9933 11.9561C13.4103 11.7021 13.5372 11.1401 13.2653 10.7231C13.0115 10.3059 12.4492 10.179 12.0322 10.4512C10.7991 11.2307 9.1853 11.2307 7.95215 10.4512C7.53503 10.1973 6.99109 10.3059 6.71912 10.7231C6.4834 11.1401 6.61023 11.6841 7.02734 11.938C7.57141 12.2825 8.1698 12.5183 8.78625 12.6633L7.09985 14.3499C6.75537 14.6943 6.75537 15.2563 7.09985 15.6011C7.28125 15.7822 7.49878 15.8547 7.73462 15.8547C7.97034 15.8547 8.18787 15.7642 8.36926 15.6011L10.0375 13.9326L11.7058 15.6011C12.0503 15.9456 12.6124 15.9456 12.9569 15.6011C13.3015 15.2563 13.3015 14.6943 12.9569 14.3499L11.2343 12.6814Z" fill-opacity="1.000000" fill-rule="evenodd"/>
             </svg>
-
           </a>
         </div>
       </div>
@@ -653,17 +595,14 @@
     </div>
     <a class="footer__developer-data" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано в HTML Academy
-      <svg width="12.000000" height="16.000000" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs/>
-        <path id="лого"
-              d="M11.2153 5.75394L5.97168 2.49957L5.97168 2.49875L5.97119 2.49918L5.9707 2.49875L5.9707 2.49957L0.784668 5.75012L0.784668 1.40659L6 0.830872L11.2153 1.40659L11.2153 5.75394ZM11.2109 6.32986L9.12549 7.62344L5.98438 5.65607L5.97949 6.22864L8.66406 7.90961L8.20117 8.19684L5.98438 6.80853L5.97949 7.3811L7.729 8.47647L7.31592 8.76718L7.30615 8.7735L5.98438 7.95383L5.97949 8.52631L6.84668 9.06403L5.96338 9.62244L0.796387 6.38861L5.9707 3.11389L5.9707 3.11447L11.2109 6.32986ZM11.2153 11.7713L6 15.0384L0.784668 11.7713L0.784668 7.02542L5.97754 10.2796L5.98633 10.8693L2.42383 8.63702L2.41895 9.20959L5.99512 11.4727L6.00391 12.0782L2.42871 9.83884L2.42334 10.4113L6 12.6745L9.60645 10.4026L9.60645 7.95712L11.2153 6.94553L11.2153 11.7713ZM6 0L0 0.662262L0 12.2411L6 16L12 12.2411L12 0.662262L6 0Z"
-              fill-opacity="1.000000" fill-rule="nonzero"/>
+        <path d="M11.2153 5.75394L5.97168 2.49957L5.97168 2.49875L5.97119 2.49918L5.9707 2.49875L5.9707 2.49957L0.784668 5.75012L0.784668 1.40659L6 0.830872L11.2153 1.40659L11.2153 5.75394ZM11.2109 6.32986L9.12549 7.62344L5.98438 5.65607L5.97949 6.22864L8.66406 7.90961L8.20117 8.19684L5.98438 6.80853L5.97949 7.3811L7.729 8.47647L7.31592 8.76718L7.30615 8.7735L5.98438 7.95383L5.97949 8.52631L6.84668 9.06403L5.96338 9.62244L0.796387 6.38861L5.9707 3.11389L5.9707 3.11447L11.2109 6.32986ZM11.2153 11.7713L6 15.0384L0.784668 11.7713L0.784668 7.02542L5.97754 10.2796L5.98633 10.8693L2.42383 8.63702L2.41895 9.20959L5.99512 11.4727L6.00391 12.0782L2.42871 9.83884L2.42334 10.4113L6 12.6745L9.60645 10.4026L9.60645 7.95712L11.2153 6.94553L11.2153 11.7713ZM6 0L0 0.662262L0 12.2411L6 16L12 12.2411L12 0.662262L6 0Z" fill-opacity="1.000000" fill-rule="nonzero"/>
       </svg>
     </a>
   </div>
 </footer>
-<script src="vendor/nouislider/nouislider.min.js"></script>
+<script src="vendor/nouislider/nouislider.min.js" async></script>
 <script src="scripts/index.js" defer></script>
 </body>
 </html>
