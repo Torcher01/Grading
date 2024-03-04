@@ -17,11 +17,16 @@
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  margin: 0 0 20px 19px;
+  margin: 0 0 21px 19px;
 
   & br {
     display: none;
   }
+}
+
+.slide-description__description--lavender,
+.slide-description__description--espresso{
+  margin-bottom: 40px;
 }
 
 .slide-description__flex-wrapper {
@@ -46,6 +51,14 @@
     color: #7859CF;
     margin-right: 5px;
   }
+}
+
+.slide-description__price--lavender:before {
+  content: "285₽"
+}
+
+.slide-description__price--espresso:before {
+  content: "395₽";
 }
 
 .slide-description__order-button {

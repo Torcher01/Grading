@@ -44,7 +44,8 @@
       <button class="header__burger-menu-open header__link">
         <img class="header__burger-menu-open-img" src="images/icons/burger_open.svg" width="16" height="16"
              alt="Развернуть меню">
-        <img class="header__burger-menu-close-img visually-hidden" src="images/icons/burger_close.svg" width="16" height="16"
+        <img class="header__burger-menu-close-img visually-hidden" src="images/icons/burger_close.svg" width="16"
+             height="16"
              alt="Свернуть меню">
       </button>
     </div>
@@ -59,35 +60,130 @@
 <main class="main">
   <section class="slider">
     <div class="container">
-      <picture>
-        <source media="(min-width: 1440px)" type="image/webp"
-                srcset="images/desktop/slider/slider_flat_white_desktop@1x.webp 1x,
+      <button class="slider__switcher slider__switcher-left" type="button">
+        <svg width="11.000000" height="20.000000" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs/>
+          <path id="Vector 2 (Stroke)" d="M9.7168 0L11 1.3208L2.56689 10L11 18.6792L9.7168 20L0 10L9.7168 0Z"
+                fill-opacity="1.000000" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <button class="slider__switcher slider__switcher-right" type="button">
+        <svg width="11.000000" height="20.000000" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs/>
+          <path id="Vector 2 (Stroke)" d="M1.2832 0L0 1.3208L8.43359 10L0 18.6792L1.2832 20L11 10L1.2832 0Z"
+                fill-opacity="1.000000" fill-rule="evenodd"/>
+        </svg>
+
+      </button>
+      <div class="slider__wrapper">
+        <div class="slider__slide slider__flat-white">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp"
+                    srcset="images/desktop/slider/slider_flat_white_desktop@1x.webp 1x,
                 images/desktop/slider/slider_flat_white_desktop@2x.webp 2x">
-        <source media="(min-width: 1440px)"
-                srcset="images/desktop/slider/slider_flat_white_desktop@1x.png 1x,
+            <source media="(min-width: 1440px)"
+                    srcset="images/desktop/slider/slider_flat_white_desktop@1x.png 1x,
                 images/desktop/slider/slider_flat_white_desktop@2x.png 2x">
-        <source media="(min-width: 768px)" type="image/webp"
-                srcset="images/tablet/slider/slider_flat_white_tablet@1x.webp 1x,
+            <source media="(min-width: 768px)" type="image/webp"
+                    srcset="images/tablet/slider/slider_flat_white_tablet@1x.webp 1x,
                 images/tablet/slider/slider_flat_white_tablet@2x.webp 2x">
-        <source media="(min-width: 768px)"
-                srcset="images/tablet/slider/slider_flat_white_tablet@1x.png 1x,
+            <source media="(min-width: 768px)"
+                    srcset="images/tablet/slider/slider_flat_white_tablet@1x.png 1x,
                 images/tablet/slider/slider_flat_white_tablet@2x.png 2x">
-        <source type="image/webp"
-                srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
+            <source type="image/webp"
+                    srcset="images/mobile/slider/flat_white_slider_mobile_img@1x.webp 1x,
                  images/mobile/slider/flat_white_slider_mobile_img@2x.webp 2x">
-        <img class="slider__flat-white-img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280"
-             height="280"
-             alt="Слайд №1: флэт-уайт без кофеина" srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
-      </picture>
-      <div class="slider__slide-description slide-description">
-        <p class="section-header">Новинка!</p>
-        <h2 class="slide-description__header">Декаф Флэт <span>Уайт</span></h2>
-        <p class="slide-description__description">Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным
-          фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-        <div class="slide-description__flex-wrapper">
-          <span class="slide-description__price">225₽</span>
-          <button class="button slide-description__order-button">Заказать</button>
+            <img class="slider__img" src="images/mobile/slider/flat_white_slider_mobile_img@1x.png" width="280"
+                 height="280"
+                 alt="Слайд номер 1: флэт-уайт без кофеина"
+                 srcset="images/mobile/slider/flat_white_slider_mobile_img@2x.png 2x">
+          </picture>
+          <div class="slider__slide-description slide-description">
+            <p class="section-header">Новинка!</p>
+            <h2 class="slide-description__header">Декаф Флэт <span>Уайт</span></h2>
+            <p class="slide-description__description">Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным
+              фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="slide-description__flex-wrapper">
+              <span class="slide-description__price">225₽</span>
+              <button class="button slide-description__order-button">Заказать</button>
+            </div>
+          </div>
+
         </div>
+        <div class="slider__slide slider__lavender">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp"
+                    srcset="images/desktop/slider/slider_lavender_desktop@1x.webp 1x,
+                images/desktop/slider/slider_lavender_desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)"
+                    srcset="images/desktop/slider/slider_lavender_desktop@1x.png 1x,
+                images/desktop/slider/slider_lavender_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/webp"
+                    srcset="images/tablet/slider/slider_lavender_tablet@1x.webp 1x,
+                images/tablet/slider/slider_lavender_tablet@2x.webp 2x">
+            <source media="(min-width: 768px)"
+                    srcset="images/tablet/slider/slider_lavender_tablet@1x.png 1x,
+                images/tablet/slider/slider_lavender_tablet@2x.png 2x">
+            <source type="image/webp"
+                    srcset="images/mobile/slider/lavender_slider_mobile_img@1x.webp 1x,
+                 images/mobile/slider/lavender_slider_mobile_img@2x.webp 2x">
+            <img class="slider__img" src="images/mobile/slider/lavender_slider_mobile_img@1x.png" width="280"
+                 height="280"
+                 alt="Слайд номер 2: лавандовый латте"
+                 srcset="images/mobile/slider/lavender_slider_mobile_img@2x.png 2x">
+          </picture>
+          <div class="slider__slide-description slide-description">
+            <p class="section-header">Новинка!</p>
+            <h2 class="slide-description__header">Лавандовый Латте</h2>
+            <p class="slide-description__description slide-description__description--lavender">Невероятное сочетание
+              перуанской высокогорной арабики с молоком ламы
+              и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="slide-description__flex-wrapper">
+              <span class="slide-description__price slide-description__price--lavender">265₽</span>
+              <button class="button slide-description__order-button">Заказать</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider__slide slider__espresso">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp"
+                    srcset="images/desktop/slider/slider_espresso_desktop@1x.webp 1x,
+                images/desktop/slider/slider_espresso_desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)"
+                    srcset="images/desktop/slider/slider_espresso_desktop@1x.png 1x,
+                images/desktop/slider/slider_espresso_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/webp"
+                    srcset="images/tablet/slider/slider_espresso_tablet@1x.webp 1x,
+                images/tablet/slider/slider_espresso_tablet@2x.webp 2x">
+            <source media="(min-width: 768px)"
+                    srcset="images/tablet/slider/slider_espresso_tablet@1x.png 1x,
+                images/tablet/slider/slider_espresso_tablet@2x.png 2x">
+            <source type="image/webp"
+                    srcset="images/mobile/slider/espresso_slider_mobile_img@1x.webp 1x,
+                 images/mobile/slider/espresso_slider_mobile_img@2x.webp 2x">
+            <img class="slider__img" src="images/mobile/slider/espresso_slider_mobile_img@1x.png" width="280"
+                 height="280"
+                 alt="Слайд номер 3: тройной эспрессо"
+                 srcset="images/mobile/slider/espresso_slider_mobile_img@2x.png 2x">
+          </picture>
+          <div class="slider__slide-description slide-description">
+            <p class="section-header">Новинка!</p>
+            <h2 class="slide-description__header">Тройной Эспрессо</h2>
+            <p class="slide-description__description slide-description__description--espresso">Мощнее укола адреналина,
+              чернее самой тёмной ночи, этот тройной
+              эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="slide-description__flex-wrapper">
+              <span class="slide-description__price slide-description__price--espresso">375₽</span>
+              <button class="button slide-description__order-button">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider__pagination">
+
       </div>
     </div>
   </section>
