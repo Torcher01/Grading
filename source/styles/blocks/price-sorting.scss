@@ -4,11 +4,6 @@
   margin-bottom: 30px;
 }
 
-.price-sorting__range {
-  position: relative;
-  margin-bottom: 67px;
-}
-
 .price-sorting__interval {
   position: absolute;
   left: 23px;
@@ -44,6 +39,7 @@
 .price-sorting__value {
   position: relative;
   display: flex;
+  margin-top: 43px;
 }
 
 .price-sorting__input {
@@ -119,6 +115,10 @@
 
   .price-sorting__input--left {
     margin-right: 29px;
+  }
+
+  .price-sorting__value {
+    margin-top: -24px;
   }
 }
 

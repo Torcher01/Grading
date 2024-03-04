@@ -24,7 +24,6 @@
     "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
-
     "lint:scripts": "eslint . --ignore-path .gitignore --ignore-pattern vendor/",
     "optimize": "npm-run-all -p optimize:**",
     "optimize:raster": "gulp optimizeRaster",
@@ -58,5 +57,8 @@
     "stylelint": "16.2.1",
     "stylelint-config-htmlacademy": "4.1.0",
     "w3c-html-validator": "1.6.4"
+  },
+  "dependencies": {
+    "nouislider": "^15.7.1"
   }
 }

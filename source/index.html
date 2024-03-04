@@ -5,7 +5,7 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
 </head>
 <body>
 <header class="header">
@@ -243,18 +243,19 @@
           <div class="form__fieldset-flex-wrapper">
             <fieldset class="form__fieldset price-sorting">
               <p class="form__label">Цена</p>
-              <div class="price-sorting__range">
-                <div class="price-sorting__slider"></div>
-                <div class="price-sorting__interval"></div>
-                <div class="price-sorting__interval-blocked"></div>
-                <div class="price-sorting__slider price-sorting__slider--max"></div>
-              </div>
+<!--              <div class="price-sorting__range">-->
+<!--                <div class="price-sorting__slider"></div>-->
+<!--                <div class="price-sorting__interval"></div>-->
+<!--                <div class="price-sorting__interval-blocked"></div>-->
+<!--                <div class="price-sorting__slider price-sorting__slider&#45;&#45;max"></div>-->
+<!--              </div>-->
+              <div class="price-sorting__range" id="slider"></div>
               <div class="price-sorting__value">
-                <input class="price-sorting__input price-sorting__input--left" type="number" id="min-price"
+                <input class="price-sorting__input price-sorting__input--left" type="text" id="min-price"
                        name="min-price"
                        placeholder="0">
                 <div class="price-sorting__separator"></div>
-                <input class="price-sorting__input" type="number" id="max-price" name="max-price" value="900"></div>
+                <input class="price-sorting__input" type="text" id="max-price" name="max-price" value="900"></div>
             </fieldset>
             <fieldset class="form__fieldset milk-presence">
               <p class="form__label">Наличие молока</p>
@@ -659,9 +660,10 @@
               d="M11.2153 5.75394L5.97168 2.49957L5.97168 2.49875L5.97119 2.49918L5.9707 2.49875L5.9707 2.49957L0.784668 5.75012L0.784668 1.40659L6 0.830872L11.2153 1.40659L11.2153 5.75394ZM11.2109 6.32986L9.12549 7.62344L5.98438 5.65607L5.97949 6.22864L8.66406 7.90961L8.20117 8.19684L5.98438 6.80853L5.97949 7.3811L7.729 8.47647L7.31592 8.76718L7.30615 8.7735L5.98438 7.95383L5.97949 8.52631L6.84668 9.06403L5.96338 9.62244L0.796387 6.38861L5.9707 3.11389L5.9707 3.11447L11.2109 6.32986ZM11.2153 11.7713L6 15.0384L0.784668 11.7713L0.784668 7.02542L5.97754 10.2796L5.98633 10.8693L2.42383 8.63702L2.41895 9.20959L5.99512 11.4727L6.00391 12.0782L2.42871 9.83884L2.42334 10.4113L6 12.6745L9.60645 10.4026L9.60645 7.95712L11.2153 6.94553L11.2153 11.7713ZM6 0L0 0.662262L0 12.2411L6 16L12 12.2411L12 0.662262L6 0Z"
               fill-opacity="1.000000" fill-rule="nonzero"/>
       </svg>
-
     </a>
   </div>
 </footer>
+<script src="vendor/nouislider/nouislider.min.js"></script>
+<script src="scripts/index.js" defer></script>
 </body>
 </html>
